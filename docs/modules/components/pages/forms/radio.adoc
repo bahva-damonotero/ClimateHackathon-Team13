@@ -1,0 +1,17 @@
+= Radio
+
+A radio option to be used inside a xref:forms/radio-group.adoc[Radio Group].
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| checked | `Boolean` | `false` | State of the radio option (auto-populated).
+| disabled | `Boolean` | `false` | Should the radio option be disabled?
+| groupId | `String` | | ID of the `<RadioGroup>` (auto-populated).
+| groupIndex | `Number` | | Index of the radio in the `<RadioGroup>` (auto-populated).
+| onChange | `(newValue: any) \=> void` | | Function called when the radio option is selected.
+| readOnly | `Boolean` | `false` | Should the radio option be marked as read-only?
+| tile | `Boolean` | `false` | If `true`, the tile radio variant is used. This is automatically set when used inside a `<RadioGroup>`.
+| value | `any` | | Value for the radio option.
+|===

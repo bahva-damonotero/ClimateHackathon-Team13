@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterCount should match snapshot 1`] = `
+<div
+  className="bah-uswds-character-count"
+>
+  <div
+    className="usa-character-count"
+  >
+    <div
+      className="usa-form-group"
+    >
+      <label
+        className="usa-label"
+        htmlFor="character-count-test-1"
+      >
+        Text input
+      </label>
+      <input
+        aria-describedby="character-count--character-count-test-1"
+        className="usa-input"
+        id="character-count-test-1"
+        maxLength={25}
+        name="character-count-test-1"
+        type="text"
+      />
+    </div>
+    <span
+      aria-live="polite"
+      className="usa-hint usa-character-count__message"
+      id="character-count--character-count-test-1"
+    />
+  </div>
+</div>
+`;

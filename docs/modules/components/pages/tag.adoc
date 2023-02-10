@@ -1,0 +1,77 @@
+= Tag
+
+A tag can be used to draw attention to new or categorized content elements.
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/tag-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX:: 
++
+--
+
+[source,jsx]
+----
+include::example$tag/TagExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Large
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/tag-large-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$tag/TagLargeExample.jsx[]
+----
+
+--
+====
+
+== Props
+In addition to the below props, any HTML attributes (such as `id`, `title`, etc.) can be used and will be passed through to the opening `<span>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description* 
+include::shared/shared.adoc[tag=className]
+| large | `Boolean` | `false` | If `true`, the size is increased slightly. 
+|===

@@ -1,0 +1,3 @@
+= Button Group Item
+
+A button item to be used inside a xref:button/button-group.adoc[Button Group].

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown should match snapshot 1`] = `
+Array [
+  <label
+    className="usa-label"
+    htmlFor="dropdown-example"
+  >
+    Dropdown Label
+  </label>,
+  <select
+    className="usa-select"
+    id="dropdown-example"
+    name="dropdown-example"
+  >
+    <option
+      value=""
+    >
+      - Select -
+    </option>
+    <option
+      value={0}
+    >
+      John Doe
+    </option>
+    <option
+      value={1}
+    >
+      Jane Doe
+    </option>
+    <option
+      value={2}
+    >
+      Bob Bobson
+    </option>
+  </select>,
+]
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileInput should match snapshot 1`] = `
+<div
+  className="bah-uswds-file-input"
+>
+  <label
+    className="usa-label"
+    htmlFor="file-input-example"
+  >
+    Select a file to upload
+  </label>
+  <span
+    className="usa-hint"
+    id="file-input-example--hint"
+  >
+    Select PDF or TXT files
+  </span>
+  <div
+    className="bah-uswds-file-input--wrapper"
+  >
+    <input
+      accept="application/pdf,text/plain"
+      aria-describedby="file-input-example--hint"
+      className="usa-file-input"
+      id="file-input-example"
+      multiple={false}
+      name="file-input-example"
+      type="file"
+    />
+  </div>
+</div>
+`;

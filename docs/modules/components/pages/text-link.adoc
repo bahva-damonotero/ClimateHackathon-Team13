@@ -1,0 +1,110 @@
+= Text Link
+
+A link component to be used in a body of text.
+
+== Usage Examples
+
+=== Internal
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/textlink-internal-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$textlink/TextLinkInternalExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== External
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/textlink-external-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$textlink/TextLinkExternalExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Open in a new tab
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/textlink-open-in-a-new-tab-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$textlink/TextLinkOpenInANewTabExample.jsx[]
+----
+
+--
+====
+
+== Props
+In addition to the below props, any HTML attributes (such as `id`, `title`, etc.) can be used and will be passed through to the opening `<a>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description* 
+include::shared/shared.adoc[tag=className]
+| external | `Boolean` | `false` | If `true`, display an icon next to the link denoting it as external. 
+| href | `String` | | URL to go to when the link is clicked. 
+|===

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Validation should match snapshot 1`] = `
+<div
+  className="bah-uswds-validation"
+>
+  <div
+    className="usa-alert usa-alert--info usa-alert--validation"
+  >
+    <div
+      className="usa-alert__body"
+    >
+      <h3
+        className="usa-alert__heading"
+      >
+        Validation test
+      </h3>
+      <ul
+        className="usa-checklist"
+        id="validation-example"
+      >
+        <li
+          className="usa-checklist__item"
+          data-validator="length-validation"
+        >
+          Use at least 8 characters
+        </li>
+      </ul>
+    </div>
+  </div>
+  <label
+    className="usa-label"
+    htmlFor="validation-input"
+  >
+    Input
+  </label>
+  <input
+    aria-describedby="validation-example"
+    className="usa-input"
+    data-validate-length-validation="^.{8,}$"
+    data-validation-element="#validation-example"
+    id="validation-input"
+    name="validation-input"
+    type="text"
+  />
+</div>
+`;

@@ -1,0 +1,109 @@
+= Pagination
+
+A component for navigating paginated content.
+
+== Usage Examples
+
+=== Fewer than 8 pages
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/pagination-fewer-than-8-pages-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$pagination/PaginationFewerThan8PagesExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== More than 7 pages
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/pagination-more-than-7-pages-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$pagination/PaginationMoreThan7PagesExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Unbounded
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/pagination-unbounded-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$pagination/PaginationUnboundedExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| onChangePage | `(newPage: number) \=> void` | | Function called when the page is changed.
+| page | `Number` | | The current, 1-indexed page number.
+| totalPages | `Number` | | The total number of pages.
+|===

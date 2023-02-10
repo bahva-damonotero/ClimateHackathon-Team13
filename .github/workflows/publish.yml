@@ -1,0 +1,70 @@
+# This workflow is to run publish when a release is created
+
+name: Publish to CSN Nexus and GitHub packages
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publishGitHub:
+    runs-on: ubuntu-latest
+    permissions: 
+      contents: read
+      packages: write 
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          
+      - if: github.event.release.prerelease
+        run: |
+          git config --global user.email "uip@bah.com"
+          git config --global user.name "Software Studio"
+          npm version ${{ github.event.release.tag_name }} --no-git-tag-version --workspaces --legacy-peer-deps
+
+      - run: |
+          npm ci --legacy-peer-deps
+          npm run build
+          npm config set registry=https://npm.pkg.github.com
+          npm config set //npm.pkg.github.com/:_authToken ${{secrets.PUBLIC_GITHUB_PAT}}
+          
+      - run: |
+          if [ "${{ github.event.release.prerelease }}" == "true" ]; then
+            npm publish --workspaces --tag=pre-release
+          else
+            npm publish --workspaces
+          fi
+          
+  publishNexus:
+    needs: [publishGitHub]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          
+      - if: github.event.release.prerelease
+        run: |
+          git config --global user.email "uip@bah.com"
+          git config --global user.name "Software Studio"
+          npm version ${{ github.event.release.tag_name }} --no-git-tag-version --workspaces --legacy-peer-deps
+
+      - run: |
+          npm ci --legacy-peer-deps
+          npm run build
+          npm config set registry=https://nexus.boozallencsn.com/repository/uip-npm-internal
+          npm config set _auth $(echo -n ${{secrets.NEXUS_USER}}:${{secrets.NEXUS_PASSWORD}} | openssl base64)
+          npm config set email uip@bah.com
+          
+      - run: |
+          if [ "${{ github.event.release.prerelease }}" == "true" ]; then
+            npm publish --workspaces --tag=pre-release
+          else
+            npm publish --workspaces
+          fi

@@ -1,0 +1,134 @@
+= Hero
+
+A hero banner used to bring attention to a project priority.
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/hero-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+[source,jsx]
+----
+include::example$hero/HeroExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Background
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/hero-background-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+[source,jsx]
+----
+include::example$hero/HeroBackgroundExample.jsx[]
+----
+--
+====
+
+'''
+
+=== No heading
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/hero-no-heading-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+[source,jsx]
+----
+include::example$hero/HeroNoHeadingExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Right alignment
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/hero-right-aligned-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+[source,jsx]
+----
+include::example$hero/HeroRightAlignedExample.jsx[]
+----
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| align | `'left' \| 'right'` | `'left'` | Should the hero content be left or right aligned?
+| background | `String` | | URL or path to an image used to override the default background.
+include::shared/shared.adoc[tag=className]
+| heading | `JSX.Element \| String` | | The heading content of the hero banner.
+|===

@@ -1,0 +1,78 @@
+= Style Guide
+
+== Automated Code Formatting
+
+=== ESLint
+
+This project utilizes https://eslint.org/[ESLint] to catch bad coding practices and style issues, and if possible, automatically fix them.
+
+To print out a report of issues ESLint has detected, use `npm run lint`.
+
+To automatically fix any fixable issues, use `npm run lint:fix`.
+
+ESLint config can be altered via `.eslintrc.js` in the root of the repo.
+
+=== Prettier
+
+This project utilizes https://prettier.io/[Prettier] to format code.
+
+To print out a report of formatting issues Prettier has detected, use `npm run prettier:check`.
+
+To automatically format files using Prettier, use `npm run prettier:write`.
+
+Prettier config can be altered via `.prettierrc.json` and `.prettierignore`.
+
+=== GitHub Actions
+
+ESLint and Prettier are configured to run in sequence via https://github.com/features/actions[GitHub Actions] whenever a PR is made for the `main` branch. If automatic fixes can be applied, a commit with those changes will be automatically applied to the PR's branch.
+
+== General Style Guidelines
+
+There are a number of guidelines that we follow that cannot be fixed via our automated code formatting methods.
+
+=== Import Ordering/Grouping
+
+This project utilizes a specific ordering when it comes to imports:
+
+. `react`, `react-router` / `react-router-dom`, `prop-types`
+. Other packages
+. Assets from packages (such as image files)
+. `@boozallen-uip/*` packages
+. Local JavaScript or JSON files
+. Other local assets (such as image files)
+
+We also utilize empty lines to group and separate types of imports.
+
+Here's what the imports should look like for a file that utilizes all of these types:
+
+include::style_examples.adoc[tag=import_order]
+
+NOTE: The ordering/grouping for `@boozallen-uip/*` package imports does not apply to code within `packages/examples` and `packages/docs-examples`.
+
+=== Prop Ordering
+
+When creating or editing a component, props should be ordered alphabetically in the destructuring and in `ComponentName.propTypes`.
+
+include::style_examples.adoc[tag=prop_order]
+
+=== Code Spacing
+
+Adding empty lines to group or separate sections of code can greatly increase its readability and "scannability" (the ability to quickly find relevant sections of code when scanning a file).
+
+Here is an example file with and without extra spacing:
+
+[tabs]
+====
+With::
++
+--
+include::style_examples.adoc[tag=with_spacing]
+--
+Without::
++
+--
+include::style_examples.adoc[tag=without_spacing]
+--
+====
+
+The example with extra spacing is far easier to read and scan to find what you want.

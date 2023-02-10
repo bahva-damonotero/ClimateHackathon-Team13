@@ -1,0 +1,10 @@
+# Troubleshooting
+
+If you are running into any strange issues, try running the following commands from the project root:
+
+```terminal
+npm run cleanup
+npm ci
+```
+
+This will remove all `node_modules`, `build`, and `coverage` folders, as well as reinstall project dependencies.

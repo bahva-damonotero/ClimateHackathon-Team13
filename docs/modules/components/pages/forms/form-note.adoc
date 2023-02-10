@@ -1,0 +1,20 @@
+= Form Note
+
+A note about a form input.
+
+== Usage
+
+[source,jsx]
+----
+import React from 'react';
+import { Form, FormNote, Input } from '@boozallen-uip/uswds-react-core';
+
+export default function FormGroupExample() {
+  return (
+    <Form>
+      <Input id="text-input">Input Label</Input>
+      <FormNote>Note about input</FormNote>
+    </Form>
+  );
+}
+----

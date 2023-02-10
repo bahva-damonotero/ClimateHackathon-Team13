@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip should match snapshot 1`] = `
+<div
+  className="bah-uswds-tooltip"
+>
+  <button
+    className="usa-button usa-tooltip"
+    data-position="right"
+    disabled={false}
+    onClick={[Function]}
+    title="Tooltip content"
+    type="button"
+  >
+    Tooltip example
+  </button>
+</div>
+`;

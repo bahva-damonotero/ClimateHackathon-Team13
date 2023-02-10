@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rm -rf dist
+mkdir dist
+
+npm run build
+
+for PACKAGE in core loading rich-text-editor table utils
+do
+  cd "packages/$PACKAGE/dist"
+  npm pack
+  mv *.tgz ../../../dist/
+  cd -
+done

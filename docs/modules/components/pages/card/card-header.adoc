@@ -1,0 +1,11 @@
+= Card Header
+
+Used to wrap the header content for a xref:card/index.adoc[Card].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| exdent | `Boolean` | `false` | Should the header be exdent?
+|===

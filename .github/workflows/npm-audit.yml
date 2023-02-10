@@ -1,0 +1,109 @@
+name: NPM Audit
+
+env:
+  WHITELIST_FILE: cve-whitelist.json
+  WHITELIST_DOCS_FILE: CVE-WHITELIST.md
+
+on:
+  # trigger on push to main
+  push:
+    branches: [main]
+  # trigger on pull request to main
+  pull_request:
+    branches: [main]
+  # run nightly
+  schedule:
+    - cron: '0 8 * * *' # 8 am UTC is 3 am EST
+  # or trigger manually
+  workflow_dispatch:
+
+jobs:
+  npm_audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout latest change
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Install jq & bsdmainutils (for column command)
+        run: |
+          sudo apt update
+          sudo apt install -y jq bsdmainutils
+
+      - name: Run npm audit
+        run : |
+          npm audit --production --json > results.json || true # `|| true` ensures the non-zero exit code is ignored
+          cat results.json
+
+      - name: Display audit results
+        run: |
+          # show whitelist count
+          WHITELIST_COUNT=$(cat $WHITELIST_FILE | jq -r 'length')
+          echo "${WHITELIST_COUNT} CVE(s) were whitelisted."
+          printf "The whitelist can be found in $WHITELIST_FILE at the root of the repository.\n"
+          printf "Documentation for why CVEs have been whitelisted can be found in $WHITELIST_DOCS_FILE at the root of the repository.\n\n"
+
+          # transform the results into an organized array
+          cat results.json \
+            | jq -r '
+              def severity_to_number:
+                {
+                  "critical": 0,
+                  "high": 1,
+                  "moderate": 2,
+                  "low": 3,
+                  "info": 4,
+                }[.];
+
+              .advisories
+              | map(. | {
+                cve: .cves[],
+                severity,
+                package: .module_name,
+                vulnerable_versions,
+                patched_versions,
+                url
+              })
+              | unique_by(.cve)
+              | sort_by([(.severity | severity_to_number), .package])' \
+            > transformed-results.json
+
+          # filter the results based on the whitelist
+          jq -s '
+            .[0] as $cves | .[1] as $whitelist
+            | $cves | map(
+              .cve as $cve
+              | select(
+                $whitelist | index($cve) < 0
+              )
+            )' transformed-results.json $WHITELIST_FILE \
+            > filtered-results.json
+
+          # get the CVE count
+          CVE_COUNT=$(cat filtered-results.json | jq -r 'length')
+
+          if [ "$CVE_COUNT" -eq "0" ]
+          then
+            echo "No CVEs detected! :)"
+          else
+            # transform the results into table columns
+            cat filtered-results.json \
+              | jq -r '
+                map(join("|"))
+                | .[]' \
+              > results.txt
+
+            # display results as a table
+            echo -e "Vulnerability|Severity|Package|Vulnerable Versions|Patched Versions|Link\n$(cat results.txt)" \
+              | column -t -s "|"
+
+            # fail with exit code of 1
+            exit 1
+          fi

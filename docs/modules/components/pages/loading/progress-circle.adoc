@@ -1,0 +1,52 @@
+= Progress Circle
+
+A progress circle to indicate the current progress of an operation.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/progress-circle-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$loading/ProgressCircleExample.jsx[]
+----
+
+--
+====
+
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| color | `String` | `'blue'` | Color of the progress circle.
+| fontFamily | `String` | | Font family used to display the percentage.
+| fontSize | `Number` | | Font size used to display the percentage.
+| fontWeight | `Number` +
+\| `'normal'` +
+\| `'bold'` +
+\| `'bolder'` +
+\| `'lighter'` | | Font size used to display the percentage.
+| rounded | `Boolean` | `true` | If `false`, the displayed percentage will not be rounded down.
+| showPercentage | `Boolean` | `true` | If `false`, the percentage is not displayed.
+| size | `Number` | `80` | Size of the spinner in pixels.
+| strokeWidth | `Number` | | Percentage (out of 100) of the progress circle.
+|===

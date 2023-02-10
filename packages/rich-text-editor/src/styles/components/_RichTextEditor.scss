@@ -1,0 +1,70 @@
+@use 'uswds-core';
+@import '~quill/dist/quill.core.css';
+
+.bah-uswds-editor {
+  .bah-uswds-editor--toolbar,
+  .bah-uswds-editor--input {
+    @include uswds-core.u-border(1px, uswds-core.$theme-color-base-dark);
+  }
+
+  .bah-uswds-editor--toolbar {
+    @include uswds-core.u-padding(1);
+    border-bottom: none;
+
+    .ql-formats {
+      &:not(:last-child) {
+        // remove right margin from last .ql-formats group in the toolbar
+        margin-right: uswds-core.units(2);
+      }
+
+      .usa-button {
+        vertical-align: middle;
+        @include uswds-core.u-padding(1.5);
+
+        width: 2.75em;
+        height: 2.5em;
+
+        &:last-child {
+          // remove right margin from last button in a .ql-formats group
+          margin-right: 0;
+        }
+      }
+    }
+
+    .text-formatting svg {
+      vertical-align: middle;
+      margin-right: uswds-core.units(1);
+    }
+
+    .ql-size,
+    .ql-align {
+      @include uswds-core.u-width(15);
+      display: inline;
+      vertical-align: middle;
+      margin-top: 0;
+
+      &:not(:last-child) {
+        margin-right: uswds-core.units(1);
+      }
+    }
+
+    .ql-bold {
+      font-weight: bold;
+    }
+
+    .ql-italic {
+      font-style: italic;
+    }
+
+    .ql-underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+#image-modal,
+#link-modal {
+  .usa-modal__main {
+    width: 90%;
+  }
+}

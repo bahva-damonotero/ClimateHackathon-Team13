@@ -1,0 +1,112 @@
+// configure USWDS design tokens
+@use 'uswds-core' with (
+  $theme-show-notifications: false,
+  $theme-image-path: '~@uswds/uswds/img',
+  $theme-hero-image: '~@uswds/uswds/img/hero.jpg',
+  $theme-font-path: '~@uswds/uswds/fonts',
+  // $theme-color-primary: 'green-50v', // this is an example of overriding the primary color setting
+  // $theme-button-border-radius: 'pill', // this is an example of overriding the border radius for buttons
+);
+
+// import USWDS and Booz Allen core styles
+@forward '@boozallen-uip/uswds-react-core/styles';
+
+/* OR import USWDS and Booz Allen core styles with configured Booz Allen design tokens */
+// @use '@boozallen-uip/uswds-react-core/styles' with (
+//   $bah-uswds-toast-fade-in: 3s, // this is an example of overriding the time it takes for a Toast Alert to fade in
+//   $bah-uswds-toast-fade-out: 3s, // this is an example of overriding the time it takes for a Toast Alert to fade out
+// );
+
+@forward '@boozallen-uip/uswds-react-loading/styles';
+@forward '@boozallen-uip/uswds-react-rich-text-editor/styles';
+@forward '@boozallen-uip/uswds-react-table/styles';
+
+#root {
+  padding: 0.5em;
+}
+
+#combobox-example-form {
+  min-height: 13rem;
+}
+
+#date-picker-example-form {
+  min-height: 24rem;
+  display: inline-block;
+  width: 100%;
+}
+
+#date-range-picker-example-form {
+  min-height: 31rem;
+  display: inline-block;
+  width: 100%;
+}
+
+#basic-header,
+#basic-header-without-search {
+  min-height: 12rem;
+}
+
+#basic-header-with-mega-menu {
+  min-height: 13rem;
+}
+
+#extended-header {
+  min-height: 15rem;
+}
+
+#extended-header-with-mega-menu {
+  min-height: 16rem;
+}
+
+#button-example-container {
+  min-height: 10rem;
+
+  .button-section {
+    > .usa-button {
+      margin: 10px !important;
+    }
+  }
+}
+
+.grid-container-example {
+  .grid-row {
+    * {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  }
+}
+
+#accordion-group-multiselect-example {
+  min-height: 15rem;
+}
+
+#grid-example {
+  .grid-row > [class^='grid-col'] {
+    border: 1px solid #000;
+    padding: 10px 5px;
+    text-align: center;
+  }
+}
+
+#example-input-prefix-suffix {
+  .usa-input-group {
+    margin-bottom: 1.5rem;
+  }
+}
+
+#form-group-example {
+  margin-left: 1.25em;
+}
+
+.bah-uswds-time-picker {
+  min-height: 20rem;
+}
+
+#modal-examples {
+  min-height: 25rem;
+
+  .grid-row {
+    margin-bottom: 2rem;
+  }
+}

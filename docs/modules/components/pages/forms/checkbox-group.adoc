@@ -1,0 +1,80 @@
+= Checkbox Group
+
+A wrapper for a group of xref:forms/checkbox.adoc[Checkbox] components.
+
+See also:
+
+* xref:forms/legend.adoc[Legend]
+* xref:forms/checkbox-label-description.adoc[CheckboxLabel Description]
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/checkbox-group-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/checkbox-group/CheckboxGroupExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Tile
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/checkbox-group-tile-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/checkbox-group/CheckboxGroupTileExample.jsx[]
+----
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=error]
+| id | `String` | | ID for the group of checkboxes.
+| tile | `Boolean` | `false` | If `true`, the tile checkbox variant is used for the entire group.
+|===

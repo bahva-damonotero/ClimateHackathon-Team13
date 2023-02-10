@@ -1,0 +1,14 @@
+= Footer Contact Info
+
+Used to provide contact info in a xref:nav/footer/index.adoc[Footer].
+
+See also: xref:nav/footer/footer-contact-item.adoc[Footer Contact Item].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| heading | `JSX.Element \| String` | `'Contact Center'` | If not using a slim Footer, allows you to override the "Contact Center" text.
+| slimFooter | `Boolean` | `false` | Set automatically by the Footer component it is used in.
+|===

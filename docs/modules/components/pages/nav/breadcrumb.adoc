@@ -1,0 +1,42 @@
+= Breadcrumb
+
+A set of breadcrumbs for your site including options for wrapped titles and adding RDFa metadata.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/breadcrumb-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/BreadcrumbExample.jsx[]
+----
+
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| links | `{ href: String, text: String }[]` | | The array of breadcrumb titles and links that are displayed.
+| meta | `Boolean` | `false` | Determines whether or not the RDFa metadata is added.
+| wrap | `Boolean` | `false` | Determines whether or not the breadcrumb titles should wrap.
+|===

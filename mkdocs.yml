@@ -1,0 +1,124 @@
+site_name: BASS USWDS React Library Docs
+site_description: Documentation for the BASS USWDS React component library
+site_author: Booz Allen Hamilton Inc.
+docs_dir: docs/
+repo_name: GitHub
+repo_url: https://github.boozallencsn.com/uip/uswds-react
+copyright: Copyright &copy; <span id="copyright_year"></span> <a href="https://www.boozallen.com/">Booz Allen Hamilton Inc.</a>
+    - All rights reserved.
+edit_uri: "edit/develop/docs/"
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      primary: teal
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      primary: teal
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode 
+  features: 
+    - content.code.annotate
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.autohide
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - techdocs-core
+
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/resize-iframe.js
+
+extra:
+  generator: false
+  social: 
+    - icon: fontawesome/brands/github
+      link: https://github.boozallencsn.com/uip/uswds-react
+    - icon: fontawesome/brands/slack
+      link: https://bah-ssp.slack.com/archives/C01BMEK53UZ
+      name: Booz Allen UIP on Slack      
+  version:
+    provider: mike
+    default: latest
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_ID
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - footnotes
+  - attr_list
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+      # permalink: "#"
+      toc_depth: 3
+  - pymdownx.snippets:
+      base_path: "docs"
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+
+nav:
+  - Home: index.md
+  - Concepts:
+    - 'concepts/overview.md'
+    - Section One:
+      - 'concepts/section-one/page-one.md'
+      - 'concepts/section-one/page-two.md'    
+    - Section Two:
+      - 'concepts/section-two/page-one.md'
+      - 'concepts/section-two/page-two.md'
+  - Reference:
+    - reference/overview.md
+    - Getting Started:
+        - reference/getting-started/from-scratch.md
+        - reference/getting-started/from-existing.md
+    - Components:
+        - Accordion: reference/components/accordion/index.md
+    - Templates:
+        - Homepage: reference/component-templates/homepage.md
+  - Tutorials:
+    - 'tutorials/overview.md'
+  - How-To Guides: 
+    - 'how-to/overview.md'
+    - 'how-to/add-new-component.md'
+    - 'how-to/add-new-package.md'
+  - Contributing:
+    - 'contributing/overview.md'
+    - 'contributing/fork-based.md'
+    - 'contributing/developer/overview.md'
+    - Library:
+      - 'contributing/developer/getting-started.md'
+      - 'contributing/developer/style-guide.md'
+      - 'contributing/developer/troubleshooting.md'
+    - Documentation:
+      - 'contributing/docs/getting-started.md'
+      - 'contributing/docs/documentation-structure.md'
+      - 'contributing/docs/local-development.md'
+      - 'contributing/docs/markdown-lint.md'
+      - 'contributing/docs/vale.md'
+      - 'contributing/docs/add-or-remove-pages.md'
+      - 'contributing/docs/acronyms.md'
+      - 'contributing/docs/markdown-cheatsheet.md'

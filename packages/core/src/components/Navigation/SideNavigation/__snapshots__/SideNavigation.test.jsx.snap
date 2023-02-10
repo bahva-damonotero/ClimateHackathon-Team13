@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideNavigation should match snapshot 1`] = `
+<nav
+  aria-label="Secondary navigation"
+>
+  <ul
+    className="usa-sidenav"
+  >
+    <li
+      className="usa-sidenav__item"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Parent link
+      </a>
+    </li>
+    <li
+      className="usa-sidenav__item"
+    >
+      <a
+        className="usa-current"
+        href="/"
+        onClick={[Function]}
+      >
+        Current page
+      </a>
+      <ul
+        className="usa-sidenav__sublist"
+      >
+        <li
+          className="usa-sidenav__item"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Child link
+          </a>
+        </li>
+        <li
+          className="usa-sidenav__item"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Child link
+          </a>
+          <ul
+            className="usa-sidenav__sublist"
+          >
+            <li
+              className="usa-sidenav__item"
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                Grandchild link
+              </a>
+            </li>
+            <li
+              className="usa-sidenav__item"
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                Grandchild link
+              </a>
+            </li>
+            <li
+              className="usa-sidenav__item"
+            >
+              <a
+                className="usa-current"
+                href="/"
+                onClick={[Function]}
+              >
+                Grandchild link
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li
+          className="usa-sidenav__item"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Child link
+          </a>
+        </li>
+        <li
+          className="usa-sidenav__item"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Child link
+          </a>
+        </li>
+        <li
+          className="usa-sidenav__item"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Child link
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li
+      className="usa-sidenav__item"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Parent link
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

@@ -1,0 +1,57 @@
+= Icon List
+
+An icon list reinforces the meaning and visibility of individual list items with a leading icon.
+
+See also:
+
+* xref:icon-list/icon-list-content.adoc[Icon List Content]
+* xref:icon-list/icon-list-icon.adoc[Icon List Icon]
+* xref:icon-list/icon-list-item.adoc[Icon List Item]
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/icon-list-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$IconListExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+In addition to the below props, any HTML attributes (such as `id`, `title`, etc.) can be used and will be passed through to the opening `<ul>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=className]
+| color | `String` | | Color for the icons. For options, see https://designsystem.digital.gov/utilities/color/[here].
+| size | `'2xs'` +
+\| `'xs'` +
+\| `'sm'` +
+\| `'md'` +
+\| `'lg'` +
+\| `'xl'` +
+\| `'2xl'` | | The size of the list.
+|===

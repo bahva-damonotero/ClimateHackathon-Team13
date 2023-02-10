@@ -1,0 +1,55 @@
+= Grid Col
+
+A grid column with 4 breakpoints.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/grid-col-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$grid/GridColExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+In addition to the below props, any HTML attributes (such as `id`, `title`, etc.) can be used and will be passed through to the opening `<div>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=className]
+| desktop | `Number` +
+\| `'auto'` +
+\| `'fill'` | | Width to use at the desktop breakpoint.
+| mobile | `Number` +
+\| `'auto'` +
+\| `'fill'` | | Width to use at the mobile breakpoint.
+| tablet | `Number` +
+\| `'auto'` +
+\| `'fill'` | | Width to use at the tablet breakpoint.
+| width | `Number` +
+\| `'auto'` +
+\| `'fill'` | | Default width to use.
+|===

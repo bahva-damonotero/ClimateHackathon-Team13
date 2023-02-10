@@ -1,0 +1,50 @@
+= Alert Outlet
+
+An outlet for displaying alerts.
+
+== Usage
+
+[source,jsx]
+----
+import React, { useEffect } from 'react';
+import {
+  AlertInstance,
+  AlertOutlet,
+  ServiceProvider,
+  useAlertService
+} from '@boozallen-uip/uswds-react-core';
+
+const outletName = 'top';
+
+export function AlertOutletExample() {
+  const alertService = useAlertService();
+  
+  useEffect(() => {
+    alertService.showAlert(outletName, new AlertInstance({
+      content: 'Site will be down for maintenance from 11PM to 4AM.',
+      type: 'info'
+    }));
+  }, []);
+  
+  return <></>;
+}
+
+export function App() {
+  return (
+    <ServiceProvider>
+      <AlertOutlet name={outletName} />
+      <AlertOutletExample />
+    </ServiceProvider>
+  );
+}
+----
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description* 
+| multiple | `Boolean` | `false` | If `true`, the outlet will support showing multiple alerts simultaneously. If `false`, only the last alert sent to this outlet will be shown. 
+| name | `String` | | A name for the outlet. 
+| reverseOrder | `Boolean` | `false` | If `true`, the outlet will display newer alerts at the top and older alerts at the bottom. 
+| toastOutlet | `Boolean` | `false` | If `true`, then any alerts sent to this outlet will automatically be closable and have their `role` set to `alertdialog`. See also xref:toast-outlet.adoc[ToastOutlet]. 
+|===

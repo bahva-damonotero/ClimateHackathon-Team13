@@ -1,0 +1,13 @@
+= Collection Meta
+
+Used to display meta information for a xref:collection/collection-item.adoc[CollectionItem] inside a xref:collection/index.adoc[Collection].
+
+See also: xref:collection/collection-meta-item.adoc[Collection Meta Item].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| label | `String` | `'More information` | Allows you to override the default 'aria-label' of "More information".
+|===

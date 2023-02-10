@@ -1,0 +1,4 @@
+.Getting Started
+
+* xref:from_scratch.adoc[Creating a New Project]
+* xref:from_existing.adoc[Adding to an Existing Project]

@@ -1,0 +1,29 @@
+= Footer Links
+
+Used to display links inside a xref:nav/footer/index.adoc[Footer].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| bigFooter | `Boolean` | `false` | Set automatically by the Footer component it is used in.
+| links a|
+----
+{
+  href: String,
+  text: String
+}[]
+----
+or
+----
+{
+  header: String,
+  links: {
+    href: String,
+    text: String
+  }[]
+}[]
+----
+| | Array of links or grouped links.
+|===

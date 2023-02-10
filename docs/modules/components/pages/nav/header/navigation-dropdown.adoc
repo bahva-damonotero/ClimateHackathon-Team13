@@ -1,0 +1,16 @@
+= Navigation Dropdown
+
+A dropdown containing navigation links to be used inside a xref:nav/header/header-navigation.adoc[Header Navigation].
+
+== Props
+In addition to the below props, any HTML attributes (such as `id`, `title`, etc.) can be used and will be passed through to the opening `<li>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| active | `Boolean` |  `false` | If `true`, apply special styling denoting this as the active or current page.
+include::../../shared/shared.adoc[tag=className]
+| id | `String` | | ID used for controlling the expansion and collapse of the dropdown.
+| links | `{ current?: Boolean, href: String, text: String, target?: String }[] +
+\| { current?: Boolean, href: String, text: String, target?: String }[][]` | | Array of links or groups of links.
+|===

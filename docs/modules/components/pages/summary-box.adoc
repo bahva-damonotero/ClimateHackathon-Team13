@@ -1,0 +1,41 @@
+= Summary Box
+
+A summary box highlights key information from a longer page or displays next steps.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/summary-box-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$SummaryBoxExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| heading | `JSX.Element` |  | Heading content for the SummaryBox.
+|===

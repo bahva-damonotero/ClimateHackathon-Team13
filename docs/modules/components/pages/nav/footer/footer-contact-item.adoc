@@ -1,0 +1,13 @@
+= Footer Contact Item
+
+A contact item inside a xref:nav/footer/footer-contact-info.adoc[Footer Contact Info].
+
+See also: xref:nav/footer/index.adoc[Footer].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| slimFooter | `Boolean` | `false` | Set automatically by the Footer component it is used in.
+|===

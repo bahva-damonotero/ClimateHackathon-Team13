@@ -1,0 +1,18 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+#headerAndMain {
+  flex: 1 0 auto;
+}
+
+.usa-footer {
+  flex-shrink: 0;
+}

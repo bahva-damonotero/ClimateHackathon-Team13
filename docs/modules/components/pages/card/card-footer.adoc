@@ -1,0 +1,11 @@
+= Card Footer
+
+Used to wrap the footer content for a xref:card/index.adoc[Card].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| exdent | `Boolean` | `false` | Should the footer be exdent?
+|===

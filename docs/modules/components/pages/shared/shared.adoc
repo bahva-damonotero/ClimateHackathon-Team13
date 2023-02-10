@@ -1,0 +1,35 @@
+// tag::border[]
+| border | `Boolean` | `false` | Should the Accordion have a border?
+// end::border[]
+
+// tag::className[]
+| className | `String` | | Any additional classes to apply.
+// end::className[]
+
+// tag::comparator[]
+| comparator | `(value: any, option: any) \=> boolean` | | Let's you specify a custom function for comparing the selected value with the list of options. If this is not provided, lodash's https://lodash.com/docs/#isEqual[isEqual] function is used.
+// end::comparator[]
+
+// tag::disabled[]
+| disabled | `Boolean` | `false` | Should the component be disabled?
+// end::disabled[]
+
+// tag::error[]
+| error | `String` | | Error message to display above the input.
+// end::error[]
+
+// tag::id[]
+| id | `String` | | ID of the input.
+// end::id[]
+
+// tag::onChange[]
+| onChange | `(e: React.ChangeEvent<T>) \=> void` | | Function called when the input value is modified.
+// end::onChange[]
+
+// tag::optionRenderer[]
+| optionRenderer | `(option: any) \=> JSX.Element \| String` | | Function that when given an option should return how the option should be displayed in the dropdown menu.
+// end::optionRenderer[]
+
+// tag::placeholder[]
+| placeholder | `String` | | Text to show when a value has not been selected.
+// end::placeholder[]

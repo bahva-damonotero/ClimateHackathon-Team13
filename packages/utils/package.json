@@ -1,0 +1,36 @@
+{
+  "name": "@boozallen-uip/uswds-react-utils",
+  "version": "3.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:boozallen-uip/uswds-react.git",
+    "directory": "packages/utils"
+  },
+  "main": "dist/utils.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "webpack --mode=production"
+  },
+  "dependencies": {
+    "react-is": "^16.8.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

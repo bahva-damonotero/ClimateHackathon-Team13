@@ -1,0 +1,11 @@
+= Collection Item
+
+An individual item in a xref:collection/index.adoc[Collection].
+
+See also:
+
+* xref:collection/collection-calendar.adoc[Collection Calendar]
+* xref:collection/collection-description.adoc[Collection Description]
+* xref:collection/collection-heading.adoc[Collection Heading]
+* xref:collection/collection-image.adoc[Collection Image]
+* xref:collection/collection-meta.adoc[Collection Meta]

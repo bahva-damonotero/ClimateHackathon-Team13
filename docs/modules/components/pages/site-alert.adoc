@@ -1,0 +1,239 @@
+= Site Alert
+
+A site alert communicates urgent sitewide information.
+
+See also: xref:alert.adoc[Alert].
+
+== Usage examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/site-alert-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$sitealert/SiteAlertExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Closable
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/site-alert-closable-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$sitealert/SiteAlertClosableExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Emergency
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/site-alert-emergency-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$sitealert/SiteAlertEmergencyExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Without heading
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/site-alert-without-heading-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$sitealert/SiteAlertWithoutHeadingExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== With list
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/site-alert-with-list-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$sitealert/SiteAlertWithListExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Slim
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/site-alert-slim-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$sitealert/SiteAlertSlimExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Slim without icon
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/site-alert-slim-without-icon-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$sitealert/SiteAlertSlimWithoutIconExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::shared/shared.adoc[tag=className]
+| emergency | `Boolean` | `false` | If `true`, the emergency alert variant is used.
+| heading | `JSX.Element \| String` | | The heading content of the alert.
+| icon | `Boolean` | `true` | Should the icon be shown or not?
+| onClose | `(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) \=> void` | | Function called when the alert's close button is clicked. The close button is hidden if this is not provided.
+| slim | `Boolean` | `false` | If `true`, the slim alert variant is used.
+|===

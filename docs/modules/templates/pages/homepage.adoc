@@ -1,0 +1,39 @@
+= Homepage Template
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/homepage-template"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$homepage/HomePageTemplate.jsx[]
+----
+
+--
+layout.scss::
++
+--
+
+[source,scss]
+----
+include::example$homepage/layout.scss[]
+----
+
+--
+====

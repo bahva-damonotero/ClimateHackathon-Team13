@@ -1,0 +1,13 @@
+= Collection Calendar
+
+Used to wrap the calendar content for a xref:collection/collection-item.adoc[Collection Item] inside a xref:collection/index.adoc[Collection].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| dateTime | `String` | | DateTime formatted string for the calendar i.e. 2020-09-30T12:00:00+01:00.
+| day | `Number` | | Day of the calendar.
+| month | `String` | | Month of the calendar.
+|===

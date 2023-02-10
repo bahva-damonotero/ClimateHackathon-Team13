@@ -1,0 +1,48 @@
+= Accordion
+
+A standalone accordion component.
+
+See also:
+
+* xref:accordion/accordion-group.adoc[Accordion Group]
+* xref:accordion/accordion-item.adoc[Accordion Item]
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/accordion-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$accordion/AccordionExample.jsx[]
+----
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=border]
+include::../shared/shared.adoc[tag=className]
+| expanded | `Boolean` | `false` | Should the accordion start expanded?
+| heading | `JSX.Element \| String` | | The heading content of the accordion.
+| id | `String` | | ID used for controlling the expansion and collapse of the accordion.
+|===

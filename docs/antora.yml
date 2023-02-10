@@ -1,0 +1,11 @@
+name: uswds-react
+title: USWDS React Component Library
+version: latest
+start_page: ROOT:index.adoc
+nav:
+- modules/ROOT/nav.adoc
+- modules/getting_started/nav.adoc
+- modules/components/nav.adoc
+- modules/patterns/nav.adoc
+- modules/templates/nav.adoc
+- modules/contributing/nav.adoc

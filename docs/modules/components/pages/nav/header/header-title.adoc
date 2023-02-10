@@ -1,0 +1,11 @@
+= Header Title
+
+A component used to set the title and/or logo content in a xref:nav/header/index.adoc[Header].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| ariaLabel | `String` | | If provided, adds `aria-label` to the link element.
+|===

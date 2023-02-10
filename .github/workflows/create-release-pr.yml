@@ -1,0 +1,32 @@
+name: Create Release PR
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: name of source branch
+        required: true
+        default: develop
+      destination:
+        description: name of destination branch
+        required: true
+        default: test
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with: 
+          fetch-depth: 0
+
+      - name: create PR
+        uses: repo-sync/pull-request@v2
+        env:
+          GITHUB_HOST: github.boozallencsn.com
+        with:
+          source_branch: ${{ github.event.inputs.source }}
+          destination_branch: ${{ github.event.inputs.destination }}
+          pr_title: Merge ${{ github.event.inputs.source }} into ${{ github.event.inputs.destination }}
+          pr_label: skip-changelog
+          github_token: ${{ secrets.GITHUB_TOKEN }}

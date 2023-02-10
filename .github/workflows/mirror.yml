@@ -1,0 +1,58 @@
+name: Mirror
+#Set up environment before running
+env:
+  USERNAME: GithubMirrorAction
+  EMAIL: <>
+  TARGET_REPO: boozallen-uip/uswds-react
+  PAT: ${{ secrets.PUBLIC_GITHUB_PAT}}
+  text_replace_file: catalog-info.yaml
+  text1: boozallen-uip/uswds-react
+  replace_text1: uip/uswds-react
+  badge: '!\\[Mirror]\\(https://github.boozallencsn.com/uip/uswds-react/actions/workflows/mirror.yml/badge.svg\\)'
+  badge2: '!\\[CI]\\(https://github.boozallencsn.com/uip/uswds-react/actions/workflows/ci.yaml/badge.svg\\)'
+
+#The trigger which runs this workflow
+on: 
+  push:
+    branches:
+      - main
+      - develop
+      - test
+      - uat
+  workflow_dispatch:
+  
+jobs:
+  mirror_repo:
+    #github will modify this value when adding a workflow.  use ubuntu-latest
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout latest change
+        uses: actions/checkout@v2
+        with: 
+          fetch-depth: 0
+          
+      - name: change files to match target
+        run: |
+          awk -v a=$text1 -v b=$replace_text1 '{sub(a,b); print > "temp"}' $text_replace_file 
+          mv temp $text_replace_file
+
+      - name: remove .github folder and badge code from README.md
+        run: |
+          rm -r .github
+          awk -v a=$badge -v b='' '{sub(a,b); print > "temp"}' README.md
+          mv temp README.md
+          awk -v a=$badge2 -v b='' '{sub(a,b); print > "temp"}' README.md
+          mv temp README.md
+
+      - name: commit changes
+        run: |
+          git config --global user.name $USERNAME
+          git config --global user.email $EMAIL
+          git add .
+          git commit -m 'mirroring reference updates'
+      
+      - name: push to target
+        run: |
+          git remote add target https://$PAT:x-oauth-basic@github.com/$TARGET_REPO
+          git push target -f -v

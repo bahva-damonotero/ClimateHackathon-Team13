@@ -1,0 +1,198 @@
+= Input
+
+A number, text, textarea, or password input.
+
+See also:
+
+* xref:forms/input-prefix.adoc[Input Prefix]
+* xref:forms/input-suffix.adoc[Input Suffix]
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/input-default-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/input/InputSuccessExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Custom width
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/input-custom-width-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/input/InputCustomWidthExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Prefix/Suffix
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/input-prefix-suffix-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/input/InputPrefixSuffixExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Success
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/input-success-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/input/InputDefaultExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Textarea
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/input-textarea-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/input/InputTextAreaExample.jsx[]
+----
+
+--
+====
+
+== Props
+In addition to the below props, any HTML attributes (such as `disabled`, `placeholder`, `rows`, etc.) can be used and will be passed through to the `<input>` or `<textarea>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| describedBy | `String` | | Passthrough for `aria-describedby`. See https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute[here]
+| inputWidth | `'2xs'` +
+\|`'xs'` +
+\|`'sm'` +
+\|`'small'` +
+\|`'md'` +
+\|`'medium'` +
+\|`'lg'` +
+\|`'xl'` +
+\|`'2xl'` | | Displays an input or input group at a specific width: 2xs (5ex), xs (9ex), sm or small (13ex), md or medium (20ex), lg (30ex), xl (40ex), and 2xl (50ex)
+include::../shared/shared.adoc[tag=error]
+include::../shared/shared.adoc[tag=id]
+include::../shared/shared.adoc[tag=onChange]
+| value | `String` +
+\| `Number` | | Used to set the value of the input.
+| success | `Boolean` | `false` | If `true`, the input is outlined in green.
+| type | `'number'` +
+\| `'password'` +
+\| `'text'` +
+\| `'textarea'` | `'text'` | The type of input.
+| validationId | `String` | | ID of the xref:forms/validation.adoc[Validation] component associated with this input.
+| validators | `{ name: String, regex: String }[]` | | Array of validators to be run on this input. See the xref:forms/validation.adoc[Validation] component for a usage example.
+|===

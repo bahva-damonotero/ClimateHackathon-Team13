@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateInput should match snapshot 1`] = `
+<fieldset
+  className="usa-fieldset"
+>
+  <legend
+    className="usa-legend"
+  >
+    Label
+  </legend>
+  <span
+    className="usa-hint"
+    id="date-input-example--hint"
+  >
+    For example: 04 28 1986
+  </span>
+  <div
+    className="usa-memorable-date"
+  >
+    <div
+      className="usa-form-group usa-form-group--month"
+    >
+      <label
+        className="usa-label"
+        htmlFor="date-input-example--month"
+      >
+        Month
+      </label>
+      <input
+        aria-describedby="date-input-example--hint"
+        className="usa-input usa-input--inline"
+        disabled={false}
+        id="date-input-example--month"
+        inputMode="numeric"
+        maxLength="2"
+        name="date-input-example--month"
+        pattern="[0-9]*"
+        readOnly={true}
+        type="text"
+        value={10}
+      />
+    </div>
+    <div
+      className="usa-form-group usa-form-group--day"
+    >
+      <label
+        className="usa-label"
+        htmlFor="date-input-example--day"
+      >
+        Day
+      </label>
+      <input
+        aria-describedby="date-input-example--hint"
+        className="usa-input usa-input--inline"
+        disabled={false}
+        id="date-input-example--day"
+        inputMode="numeric"
+        maxLength="2"
+        name="date-input-example--day"
+        pattern="[0-9]*"
+        readOnly={true}
+        type="text"
+        value={25}
+      />
+    </div>
+    <div
+      className="usa-form-group usa-form-group--year"
+    >
+      <label
+        className="usa-label"
+        htmlFor="date-input-example--year"
+      >
+        Year
+      </label>
+      <input
+        aria-describedby="date-input-example--hint"
+        className="usa-input usa-input--inline"
+        disabled={false}
+        id="date-input-example--year"
+        inputMode="numeric"
+        maxLength="4"
+        minLength="4"
+        name="date-input-example--year"
+        pattern="[0-9]*"
+        readOnly={true}
+        type="text"
+        value={1995}
+      />
+    </div>
+  </div>
+</fieldset>
+`;

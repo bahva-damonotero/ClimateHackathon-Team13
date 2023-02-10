@@ -1,0 +1,12 @@
+= Legend
+
+Used to set the label for a fieldset, xref:forms/checkbox-group.adoc[Checkbox Group], or xref:forms/radio-group.adoc[Radio Group].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| error | `Boolean` \| `String` | | If a truthy value is passed in, the label will be highlighted indicating there is an error.
+| screenReaderOnly | `Boolean` | `false` | If `true`, the label will only be visible to screen readers.
+|===

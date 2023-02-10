@@ -1,0 +1,41 @@
+= Skip Nav
+
+A component that allows users with screen readers to bypass long navigation lists.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/skipnav-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/SkipNavExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| href | `String` | | Anchor link to go to when the Skip Nav link is triggered.
+|===

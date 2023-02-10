@@ -1,0 +1,40 @@
+= Character Count
+
+A component that helps users know how much text they can enter when there is a limit on the number of characters.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/character-count-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/CharacterCountExample.jsx[]
+----
+
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| target | `String` | | The ID of the xref:forms/input.adoc[Input] to show the character count for.
+|===

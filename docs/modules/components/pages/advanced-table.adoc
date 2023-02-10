@@ -1,0 +1,57 @@
+= (WIP/Experimental) Advanced Table
+
+This package contains a 508 compliant table component with optimized endless scrolling and support for local and server-side sorting.
+
+== Installation
+
+[source,bash]
+----
+npm i @boozallen-uip/uswds-react-table
+----
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/advanced-table-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$advanced-table/AdvancedTableExample.jsx[]
+----
+
+--
+====
+
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| borderless | `Boolean` | `false` | If `true` is passed in, then borders are removed from table cells.
+| columns | `Object` | | Column definitions that determine how the column headers should be rendered.
+| data | `Array` | | Array of row data to be displayed in the table.
+| loadNextPage | `(sort?: { direction: 'asc' \| 'desc'; field: string }) \=> void` | | Function called when the user scrolls to the end of the table or the sorting is changed.
+| localSort | `Boolean` | `true` | If `false` is passed in, local sorting is disabled.
+| sort | `{ direction: 'asc' \| 'desc', field: String }` | | Used to specify the sort direction and column.
+| tableInstance | `String`  | | Whenever the value for this prop changes, the table reloads and resets the scroll back to the top-left.
+| visibleHeight | `Number`  | | The maximum visible height of the table body. If there are more rows than can fit in this, a vertical scrollbar will be shown.
+| visibleWidth | `Number`  | | The maximum visible width of the table.
+|===

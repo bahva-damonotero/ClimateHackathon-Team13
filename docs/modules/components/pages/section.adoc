@@ -1,0 +1,33 @@
+= Section
+
+A section wrapper that adds top and bottom margins.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/section-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$SectionExample.jsx[]
+----
+
+--
+====

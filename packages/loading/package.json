@@ -1,0 +1,50 @@
+{
+  "name": "@boozallen-uip/uswds-react-loading",
+  "version": "3.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:boozallen-uip/uswds-react.git",
+    "directory": "packages/loading"
+  },
+  "main": "dist/loading.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/loading.js",
+      "default": "./dist/loading.js"
+    },
+    "./styles": "./dist/scss",
+    "./styles/*": "./dist/scss/*/index.scss"
+  },
+  "sideEffects": [
+    "**/*.scss"
+  ],
+  "scripts": {
+    "build": "webpack --mode=production",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@boozallen-uip/uswds-react-utils": "*",
+    "react-scripts": "5.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.53.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

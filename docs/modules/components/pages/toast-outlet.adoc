@@ -1,0 +1,53 @@
+= Toast Outlet
+
+Registers several special xref:alert-outlet.adoc[AlertOutlet]s for displaying "toast" alerts.
+
+This component should be placed somewhere high up in the DOM.
+
+The following outlets are registered:
+[source,language-none]
+----
+toast-top
+toast-bottom
+toast-left
+toast-right
+toast-top-left
+toast-top-right
+toast-bottom-left
+toast-bottom-right
+----
+
+== Usage
+
+[source,jsx]
+----
+import React, { useEffect } from 'react';
+import {
+  AlertInstance,
+  ServiceProvider,
+  ToastOutlet,
+  useAlertService
+} from '@boozallen-uip/uswds-react-core';
+
+export function ToastOutletExample() {
+  const alertService = useAlertService();
+  
+  useEffect(() => {
+    alertService.showAlert('toast-top-right', new AlertInstance({
+      content: 'Action completed successfully.',
+      type: 'success'
+    }));
+  }, []);
+  
+  return <></>;
+}
+
+export function App() {
+  return (
+    <ServiceProvider>
+      <ToastOutlet />
+      <AlertOutletExample />
+    </ServiceProvider>
+  );
+}
+----

@@ -1,0 +1,39 @@
+= Card Group
+
+Used to group related xref:card/index.adoc[Cards] together.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/card-group-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+[source,jsx]
+----
+include::example$card/CardGroupExample.jsx[]
+----
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=className]
+|===

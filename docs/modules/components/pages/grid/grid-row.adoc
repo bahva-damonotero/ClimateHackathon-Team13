@@ -1,0 +1,44 @@
+= Grid Row
+
+A grid row with a width of 12 columns.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/grid-row-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$grid/GridRowExample.jsx[]
+----
+--
+====
+
+== Props
+
+In addition to the below props, any HTML attributes (such as `id`, `title`, etc.) can be used and will be passed through to the opening  `<div>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=className]
+| gaps | `Boolean` | `false` | Should the row have gaps between its columns?
+| gapSize | `Number` | `4` | The size of the gaps. The `gaps` prop must be `true` for this to have an effect.
+|===

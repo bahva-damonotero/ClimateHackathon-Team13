@@ -1,0 +1,50 @@
+
+name: Publish docs-extras
+
+env:
+  PUBLISH_DIR: docs-extras
+
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+
+    - name: Install dependencies & build component library
+      run: |
+        npm ci
+        npm run build
+
+    - name: Build docs examples
+      run: |
+        CI=false npm run build-docs-examples # outputs to `packages/docs-examples/build`
+
+    # - name: Build storybook
+    #   run: |
+    #     npm run build-storybook # outputs to `storybook-static`
+      
+    - name: Create directory structure
+      run: |
+        mkdir ${{ env.PUBLISH_DIR }}
+
+        mv packages/docs-examples/build/ ${{ env.PUBLISH_DIR }}/examples-react
+        # mv storybook-static/ ${{ env.PUBLISH_DIR }}/storybook-react
+
+    - name: Publish to docs-extras branch
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./${{ env.PUBLISH_DIR }}
+        publish_branch: docs-extras

@@ -1,0 +1,3 @@
+= Footer Social Links
+
+A wrapper for xref:nav/footer/footer-social-link.adoc[Footer Social Link](s) used in a xref:nav/footer/index.adoc[Footer].

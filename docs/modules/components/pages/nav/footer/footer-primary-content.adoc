@@ -1,0 +1,3 @@
+= Footer Primary Content
+
+Used to display primary content inside of a xref:nav/footer/index.adoc[Footer].

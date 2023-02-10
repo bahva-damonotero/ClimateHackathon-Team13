@@ -1,0 +1,120 @@
+{
+  "name": "@boozallen-uip/uswds-react-root",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:boozallen-uip/uswds-react.git"
+  },
+  "workspaces": [
+    "packages/utils",
+    "packages/core",
+    "packages/loading",
+    "packages/rich-text-editor",
+    "packages/table",
+    "packages/docs-examples",
+    "packages/examples"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf packages/*/dist",
+    "build": "npm run build --workspaces --if-present",
+    "postbuild": "./scripts/postbuild",
+    "build-tarball": "./scripts/build-tarball",
+    "build-storybook": "build-storybook",
+    "build-docs-examples": "npm run build:docs --workspaces --if-present",
+    "lint": "eslint --no-error-on-unmatched-pattern --ext .js,.jsx packages/**",
+    "lint:fix": "eslint --no-error-on-unmatched-pattern --fix --ext .js,.jsx packages/**",
+    "sasslint": "sass-lint -v -q",
+    "examples": "npm run start --workspace=@boozallen-uip/uswds-react-examples",
+    "docs-examples": "npm run start --workspace=@boozallen-uip/uswds-react-docs-examples",
+    "storybook": "start-storybook -p 6006",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:update": "jest -u",
+    "test:coverage": "jest --coverage",
+    "coverage-badge": "make-coverage-badge --output-path coverage-badge.svg",
+    "version:major": "npm version major --workspaces",
+    "version:minor": "npm version minor --workspaces",
+    "version:patch": "npm version patch --workspaces",
+    "prettier:base": "prettier \"packages/*/src/**/*.{js,scss}\"",
+    "prettier:check": "npm run prettier:base -- --check",
+    "prettier:write": "npm run prettier:base -- --write",
+    "cleanup": "rm -rf {node_modules,coverage}; rm -rf packages/*/{node_modules,dist,build}",
+    "regenerate-package-lock": "npm run cleanup && rm package-lock.json && npm i --legacy-peer-deps"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "sasslintConfig": ".sasslint.yaml",
+  "dependencies": {
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "5.0.0",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
+    "@storybook/addon-a11y": "^6.5.12",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/addon-storysource": "^6.5.12",
+    "@storybook/addons": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/node-logger": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/dom": "^7.29.6",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^12.7.2",
+    "@zeit/ncc": "^0.22.3",
+    "babel-jest": "^27.3.1",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-storybook": "^0.5.6",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.3.1",
+    "jest-environment-jsdom": "^27.3.1",
+    "lodash": "^4.17.20",
+    "make-coverage-badge": "^1.2.0",
+    "mutation-observer": "^1.0.3",
+    "postcss": "^8.4.5",
+    "prettier": "^2.4.1",
+    "react-test-renderer": "^18.2.0",
+    "require-context.macro": "^1.2.2",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^13.1.0",
+    "sonarqube-scanner": "^2.7.0",
+    "storybook-react-router": "^1.0.8",
+    "style-loader": "^3.3.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^3.3.12"
+  }
+}

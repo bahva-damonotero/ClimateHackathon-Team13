@@ -1,0 +1,41 @@
+= Rich Text Editor
+
+A USWDS themed Rich Text Editor/WYSIWYG component powered by https://quilljs.com/[Quill].
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/rich-text-editor-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$rich-text-editor/RichTextEditorExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| onChange | `(newContent: string) \=> void` | | Function called with the new content whenever the editor's content changes.
+|===

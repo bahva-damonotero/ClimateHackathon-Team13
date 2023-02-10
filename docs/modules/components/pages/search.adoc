@@ -1,0 +1,114 @@
+= Search
+
+A basic search bar component.
+
+== Usage Examples
+
+=== Small
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/search-small-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$search/SearchSmallExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Medium
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/search-medium-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$search/SearchMediumExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Large
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/search-large-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$search/SearchLargeExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+In addition to the below props, any HTML attributes (such as `id`, `title`, etc.) can be used and will be passed through to the opening `<form>` tag.
+
+[grid="rows"]
+|===
+| *Property* | *Type* | *Default* | *Description*
+include::shared/shared.adoc[tag=className]
+| onSearch | `(searchQuery: string) \=> void` | | Function called when the Search button is pressed (or when the user presses the Enter key in the text field). The function is called with the search query.
+| size | `'small'` +
+\| `'medium'` +
+\| `'large'` | `'medium'` | The size of the search bar.
+| placeholder | `String` | | Text to show when the search field is empty.
+|===

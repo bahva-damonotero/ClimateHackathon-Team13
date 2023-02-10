@@ -1,0 +1,12 @@
+= Step Indicator Segment
+
+A step segment to be used inside a xref:step-indicator.adoc[Step Indicator].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description* 
+| complete | `Boolean` | `false` | Is the step completed?
+| current | `Boolean` | `false` | Is this the current step?
+|===

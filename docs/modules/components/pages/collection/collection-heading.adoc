@@ -1,0 +1,3 @@
+= Collection Heading
+
+Used to wrap the heading for a xref:collection/collection-item.adoc[Collection Item] inside a xref:collection/index.adoc[Collection].

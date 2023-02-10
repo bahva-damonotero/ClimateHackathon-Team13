@@ -1,0 +1,55 @@
+= Button
+
+A basic, styled button component.
+
+See also:
+
+* xref:button/button-group.adoc[Button Group]
+* xref:button/button-group-item.adoc[Button Group Item]
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/button-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$button/ButtonExample.jsx[]
+----
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| accentCool | `Boolean` | `false` | If `true`, use the "accent cool" color scheme.
+| base | `Boolean` | `false` | If `true`, use the "base" color scheme.
+| big | `Boolean` | `false` | If `true`, the size of the button is almost doubled.
+include::../shared/shared.adoc[tag=className]
+include::../shared/shared.adoc[tag=disabled]
+| href | `String` |  | If a value for this prop is provided, the button will use an anchor tag instead of a button tag.
+| inverse | `Boolean` | `false` | If `true`, use the "inverse" color scheme. The `outline` prop must be `true` for this to have an effect. This is best used with dark backgrounds.
+| onClick | `(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) \=> void` | | Function called when the button is clicked.
+| outline | `Boolean` | `false` | If `true`, the outline variane of the button is used.
+| secondary | `Boolean` | `false` | If `true`, use the "secondary" color scheme.
+| unstyled | `Boolean` | `false` | If `true`, the button is styled to look like a link.
+|===

@@ -1,0 +1,108 @@
+= Accordion Group
+
+Wrapper for xref:accordion/accordion-item.adoc[Accordion Item](s) that allows only one to be expanded at a time.
+
+See also: xref:accordion/index.adoc[Accordion].
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/accordion-group-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$accordion/AccordionGroupExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Bordered
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/accordion-group-bordered-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$accordion/AccordionGroupBorderedExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Multi-select
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/accordion-group-multiselect-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$accordion/AccordionGroupMultiselectExample.jsx[]
+----
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=border]
+include::../shared/shared.adoc[tag=className]
+| multiselect | `Boolean` | `false` | Should the accordion allow multiple expanded accordion items simultaneously?
+|===

@@ -1,0 +1,177 @@
+= Step Indicator
+
+A step indicator updates users on their progress through a multi-step process.
+
+See also: xref:step-indicator-segment.adoc[Step Indicator Segment].
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/step-indicator-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$stepindicator/StepIndicatorExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== No labels
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/step-indicator-no-labels-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$stepindicator/StepIndicatorNoLabelsExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Centered
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/step-indicator-centered-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$stepindicator/StepIndicatorCenteredExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Counters
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/step-indicator-counters-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$stepindicator/StepIndicatorCountersExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Small counters
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/step-indicator-small-counters-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$stepindicator/StepIndicatorSmallCountersExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| centered | `Boolean` | `false` | If `true`, the step labels are centered.
+| counters | `Boolean` +
+\| `'small'` | `false` | If `true` or `'small'` is passed in, a counters variant will be used.
+| current | `Number` | | The 1-based index of the current step.
+| labels | `Boolean` | `true` | If `false`, no labels will be visiblw under the steps.
+|===

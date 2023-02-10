@@ -1,0 +1,15 @@
+@use "sass:map";
+@use 'uswds-core';
+
+@each $name, $value in uswds-core.$system-color-shortcodes {
+  $color: map.get(uswds-core.$system-color-shortcodes, $name);
+  @if $color != false {
+    .fill-#{$name} {
+      fill: uswds-core.color($name);
+    }
+
+    .stroke-#{$name} {
+      stroke: uswds-core.color($name);
+    }
+  }
+}

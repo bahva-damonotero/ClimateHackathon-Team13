@@ -1,0 +1,3 @@
+= Modal Footer
+
+Used to wrap the footer for a xref:modal/index.adoc[Modal].

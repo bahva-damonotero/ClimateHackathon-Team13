@@ -1,0 +1,14 @@
+= Collection Meta Item
+
+An individual meta item to be used inside a xref:collection/collection-meta.adoc[Collection Meta].
+
+See also: xref:collection/index.adoc[Collection].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| newTag | `Boolean` | `false` | If `true`, the tag will be highlighted.
+| tag | `Boolean` | `false` | If `true`, the child will be presented as a tag.
+|===

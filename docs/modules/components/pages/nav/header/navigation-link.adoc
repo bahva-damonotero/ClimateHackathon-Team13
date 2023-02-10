@@ -1,0 +1,14 @@
+= Navigation Link
+
+A simple navigation link to be used inside a xref:nav/header/header-navigation.adoc[Header Navigation] or xref:nav/header/header-secondary-navigation.adoc[Header Secondary Navigation] component.
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| active | `Boolean` | `false` | If `true`, apply special styling denoting this as the active or the current page. This does nothing if `secondary` is also `true`.
+include::../../shared/shared.adoc[tag=className]
+| href | `String` | | URL to go to when the link is clicked.
+| secondary | `Boolean` | `false` | If `true`, style the link in a way to be shown above the header's search bar. This prop is automatically set to `true` when using this component inside a `<HeaderSecondaryNavigation />` component.
+|===

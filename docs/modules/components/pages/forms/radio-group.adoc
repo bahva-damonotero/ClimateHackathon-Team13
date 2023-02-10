@@ -1,0 +1,84 @@
+= Radio Group
+
+A wrapper for a group of xref:forms/radio.adoc[Radio] components.
+
+See also: xref:forms/legend.adoc[Legend].
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/radio-group-default-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/radio-group/RadioGroupDefaultExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Tile
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/radio-group-tile-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/radio-group/RadioGroupTileExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=comparator]
+| disabled | `Boolean` | `false` | Should all the radio options be disabled?
+include::../shared/shared.adoc[tag=error]
+| id | `String` | | ID for the group of radio options.
+| onChange | `(e: CustomEvent) \=> void` | | Function called whenever the radio selection is changed.
+| readOnly | `Boolean` | `false` | Should the radio options be marked as read-only?
+| tile | `Boolean` | `false` | If `true`, the tile radio variant is used for the entire group.
+| value | `any` | | Used to set the radio selection.
+|===

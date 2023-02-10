@@ -1,0 +1,134 @@
+@use 'uswds-core';
+
+.bah-uswds-table-container {
+  position: relative;
+  overflow: hidden;
+
+  .bah-uswds-table-content {
+    position: relative;
+  }
+
+  .bah-uswds-table-header-container {
+    position: relative;
+    overflow: hidden;
+
+    .bah-uswds-table-header {
+      display: block;
+      z-index: 2;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+
+      white-space: nowrap;
+      will-change: transform;
+
+      .bah-uswds-table-header-row {
+        display: table;
+        position: absolute;
+
+        .bah-uswds-table-header-cell {
+          @include uswds-core.u-border(1px);
+          @include uswds-core.u-bg('gray-20');
+          display: table-cell;
+          font-size: 1rem;
+          font-weight: 600;
+
+          .bah-uswds-table-header-cell-content {
+            // fix focus indicator by making the active header
+            // cell always show above the other cells
+            &:focus {
+              z-index: 9999;
+            }
+
+            .bah-uswds-table-header-sort {
+              display: table;
+              padding: 0.8125rem 1.125rem;
+
+              .bah-uswds-table-header-label,
+              .bah-uswds-table-header-sort-icon {
+                display: table-cell;
+              }
+
+              button {
+                border: none;
+                background: none;
+                display: block;
+                height: 1.25rem;
+
+                svg {
+                  position: relative;
+                  top: 0.125rem;
+                }
+              }
+            }
+          }
+        }
+
+        .bah-uswds-table-header-cell--borderless {
+          @extend .bah-uswds-table-header-cell;
+          @include uswds-core.u-border(0);
+        }
+      }
+    }
+  }
+
+  .bah-uswds-table-body-section {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &.bah-uswds-table-body-section__scrollable {
+      overflow-y: scroll;
+    }
+
+    .bah-uswds-table-body-container {
+      display: block;
+      left: 0;
+      z-index: 1;
+      overflow: hidden;
+
+      .bah-uswds-table-body {
+        display: table;
+
+        .bah-uswds-table-row {
+          .bah-uswds-table-cell {
+            @include uswds-core.u-border(1px);
+            display: table-cell;
+            position: absolute;
+            padding: 0.625rem;
+            font-size: 0.875rem;
+
+            &.bah-uswds-table-cell__odd-row {
+              @include uswds-core.u-bg('gray-3');
+            }
+
+            // fix focus indicator by making the active cell
+            // always show above the other cells
+            &:focus {
+              z-index: 9999;
+            }
+          }
+
+          .bah-uswds-table-cell--borderless {
+            @extend .bah-uswds-table-cell;
+            @include uswds-core.u-border(0);
+          }
+        }
+      }
+    }
+  }
+
+  .bah-uswds-table-no-data {
+    @include uswds-core.u-border(1px);
+    display: table;
+    height: 1rem;
+
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}

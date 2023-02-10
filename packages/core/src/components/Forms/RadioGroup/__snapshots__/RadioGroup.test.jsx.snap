@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroup should match snapshot 1`] = `
+<fieldset
+  className="usa-fieldset"
+>
+  <legend
+    className="usa-legend usa-sr-only"
+  >
+    Gender
+  </legend>
+  <div
+    className="usa-radio"
+  >
+    <input
+      checked={false}
+      className="usa-radio__input"
+      disabled={false}
+      id="radio-group-example--0"
+      name="radio-group-example"
+      readOnly={true}
+      type="radio"
+    />
+    <label
+      className="usa-radio__label"
+      htmlFor="radio-group-example--0"
+    >
+      Male
+    </label>
+  </div>
+  <div
+    className="usa-radio"
+  >
+    <input
+      checked={false}
+      className="usa-radio__input"
+      disabled={false}
+      id="radio-group-example--1"
+      name="radio-group-example"
+      readOnly={true}
+      type="radio"
+    />
+    <label
+      className="usa-radio__label"
+      htmlFor="radio-group-example--1"
+    >
+      Female
+    </label>
+  </div>
+  <div
+    className="usa-radio"
+  >
+    <input
+      checked={false}
+      className="usa-radio__input"
+      disabled={false}
+      id="radio-group-example--2"
+      name="radio-group-example"
+      readOnly={true}
+      type="radio"
+    />
+    <label
+      className="usa-radio__label"
+      htmlFor="radio-group-example--2"
+    >
+      Other
+    </label>
+  </div>
+  <div
+    className="usa-radio"
+  >
+    <input
+      checked={false}
+      className="usa-radio__input"
+      disabled={true}
+      id="radio-group-example--3"
+      name="radio-group-example"
+      readOnly={true}
+      type="radio"
+    />
+    <label
+      className="usa-radio__label"
+      htmlFor="radio-group-example--3"
+    >
+      Prefer not to say
+    </label>
+  </div>
+</fieldset>
+`;

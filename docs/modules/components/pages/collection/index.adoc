@@ -1,0 +1,149 @@
+= Collection
+
+A collection displays a compact list of multiple related items like articles or events. The list links each item to its original source.
+
+See also:
+
+* xref:collection/collection-calendar.adoc[Collection Calendar]
+* xref:collection/collection-description.adoc[Collection Description]
+* xref:collection/collection-heading.adoc[Collection Heading]
+* xref:collection/collection-image.adoc[Collection Image]
+* xref:collection/collection-item.adoc[Collection Item]
+* xref:collection/collection-meta.adoc[Collection Meta]
+* xref:collection/collection-meta-item.adoc[Collection Meta Item]
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/collection-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$collection/CollectionExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Media thumbnails
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/collection-media-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$collection/CollectionMediaExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Calendar display
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/collection-calendar-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$collection/CollectionCalendarExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Headings only
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/collection-headings-only-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$collection/CollectionHeadingsOnlyExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| condensed | `Boolean` | `false` | If `true`, the Collection is presented with less space between items.
+|===

@@ -1,0 +1,113 @@
+= Date Picker
+
+A component that helps users select a single date.
+
+See also: xref:forms/date-range-picker.adoc[Date Range Picker].
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/date-picker-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/date-picker/DatePickerExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Min and max dates
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/date-picker-min-max-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/date-picker/DatePickerMinMaxExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Date range
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/date-picker-range-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/date-picker/DatePickerRangeExample.jsx[]
+----
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=disabled]
+include::../shared/shared.adoc[tag=error]
+| hint | `JSX.Element \| String` | `'mm/dd/yyyy'` | Hint to be shown for the date picker.
+include::../shared/shared.adoc[tag=id]
+| maxDate | `String` | | The date picker will not allow a date selection after this date. Must be in the format: `YYYY-MM-DD`.
+| minDate | `String` | | The date picker will not allow a date selection before this date. Must be in the format: `YYYY-MM-DD`.
+include::../shared/shared.adoc[tag=onChange]
+| rangeDate | `String` | | When set, the date picker will show a range selection from the range date. Must be in the format: `YYYY-MM-DD`.
+| value | `String` | | Used to set the value of the input. Must be in the format: `YYYY-MM-DD`.
+|===

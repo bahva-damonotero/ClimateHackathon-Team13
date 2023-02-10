@@ -1,0 +1,78 @@
+= US Government Banner
+
+A banner that identifies your site as an official website
+of the United States government and helps visitors understand
+how to tell that it is official.
+
+== Usage Examples
+
+=== .gov domain
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/usgovernmentbanner-.gov-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$usgovernmentbanner/USGovernmentBannerDotGovExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== .mil domain
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/usgovernmentbanner-.mil-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$usgovernmentbanner/USGovernmentBannerDotMilExample.jsx[]
+----
+
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description* 
+include::shared/shared.adoc[tag=className]
+| domain | `'gov'` +
+\| `'mil'` | `'gov'` | Top-level domain (TLD) of the web app. 
+|===

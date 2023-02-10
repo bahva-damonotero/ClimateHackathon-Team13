@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should match snapshot (input) 1`] = `
+Array [
+  <label
+    className="usa-label"
+    htmlFor="input-example"
+  >
+    Input label
+  </label>,
+  <input
+    className="usa-input"
+    id="input-example"
+    name="input-example"
+    readOnly={true}
+    type="text"
+  />,
+]
+`;
+
+exports[`Input should match snapshot (textarea) 1`] = `
+Array [
+  <label
+    className="usa-label"
+    htmlFor="input-example"
+  >
+    Input label
+  </label>,
+  <textarea
+    className="usa-textarea"
+    id="input-example"
+    name="input-example"
+    readOnly={true}
+  />,
+]
+`;

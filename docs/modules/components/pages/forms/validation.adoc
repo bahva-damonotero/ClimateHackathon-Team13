@@ -1,0 +1,42 @@
+= Validation
+
+A component for listing the requirements of an input and checking them off as they are met.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/validation-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/ValidationExample.jsx[]
+----
+
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| heading | `JSX.Element \| String` | | The heading content of the validation component.
+include::../shared/shared.adoc[tag=id]
+| requirements | `{ text: String, validator: String }[]` | | Array of requirements.
+|===

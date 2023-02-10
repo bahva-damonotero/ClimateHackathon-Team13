@@ -1,0 +1,79 @@
+= Tooltip
+
+A tooltip is a short descriptive message that appears when a user hovers or focuses on an element.
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/tooltip-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$tooltip/TooltipExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Icon
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/tooltip-icon-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$tooltip/TooltipIconExample.jsx[]
+----
+
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description* 
+include::shared/shared.adoc[tag=className]
+| content | `String` | | The content of the tooltip. 
+| position | `'top'` +
+\| `'left'` +
+\| `'bottom'` +
+\| `'right'` | `'top'` | The position of the tooltip. 
+|===

@@ -1,0 +1,12 @@
+= Collection Image
+
+Displays a thumbnail image for a xref:collection/collection-item.adoc[Collection Item] inside a xref:collection/index.adoc[Collection].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| alt | `String` | | Screen reader text (or alt text) for the media thumbnail.
+| src | `String` | | URL or path of the media thumbnail.
+|===

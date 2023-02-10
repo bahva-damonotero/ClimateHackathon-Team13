@@ -1,0 +1,7 @@
+.Patterns
+
+* Form Templates
+** xref:form-templates/name.adoc[Name Form]
+** xref:form-templates/address.adoc[Address Form]
+** xref:form-templates/sign-in.adoc[Sign-in Form]
+** xref:form-templates/password-reset.adoc[Password Reset Form]

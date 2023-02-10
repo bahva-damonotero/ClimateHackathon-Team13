@@ -1,0 +1,44 @@
+= Form Group
+
+A wrapper for grouping form inputs.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/form-group-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/FormGroupExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+In addition to the below props, any HTML attributes (such as `id`, `title`, etc.) can be used and will be passed through to the opening `<div>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=className]
+| error | `Boolean` | `false` | If a truthy value is passed in, a vertical, red bar is shown to the left of the form group.
+|===

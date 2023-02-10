@@ -1,0 +1,242 @@
+= Table
+
+A table wrapper that provides USWDS styling.
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/table-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$table/TableExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Borderless
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/table-borderless-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$table/TableBorderlessExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Compact
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/table-compact-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$table/TableCompactExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Striped
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/table-striped-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$table/TableStripedExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Scrollable
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/table-scrollable-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$table/TableScrollableExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Stacked
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/table-stacked-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$table/TableStackedExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Stacked header
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/table-stacked-header-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$table/TableStackedHeaderExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+In addition to the below props, any HTML attributes (such as `id`, `title`, etc.) can be used and will be passed through to the opening `<table>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| border | `Boolean` | `true` | Should the table have a border?
+include::shared/shared.adoc[tag=className]
+| compact | `Boolean` | `false` | If `true`, row height and vertical spacing will be reduced to display more table rows within a limited space.
+| scrollable | `Boolean` | `false` | Should the table have a horizontal scrollbar?
+| stacked | `Boolean` | `false` | Should the table cells stack on narrow screens?
+| stackedHeader | `Boolean` | `false` | Should the table cells stack on narrow screens and visually promote the first cell of every row into a "header" for that group?
+| striped | `Boolean` | `false` | Should the table apply alternating horizontal striping?
+|===

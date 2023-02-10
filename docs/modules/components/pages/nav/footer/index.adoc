@@ -1,0 +1,119 @@
+= Footer
+
+A footer serves site visitors who arrive at the bottom of a page without finding what they want.
+
+See also:
+
+* xref:nav/footer/footer-contact-info.adoc[Footer Contact Info]
+* xref:nav/footer/footer-contact-item.adoc[Footer Contact Item]
+* xref:nav/footer/footer-links.adoc[Footer Links]
+* xref:nav/footer/footer-logo.adoc[Footer Logo]
+* xref:nav/footer/footer-primary-content.adoc[Footer Primary Content]
+* xref:nav/footer/footer-social-link.adoc[Footer Social Link]
+* xref:nav/footer/footer-social-links.adoc[Footer Social Links]
+
+== Usage Examples
+
+=== Big
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/footer-big-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/Footer/FooterBigExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Medium
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/footer-medium-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/Footer/FooterMediumExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Slim
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/footer-slim-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/Footer/FooterSlimExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../../shared/shared.adoc[tag=className]
+| showReturnToTop | `Boolean` | `true` | Should the "Return to Top" link be shown above the footer?
+| slim | `Boolean` | `false` | If `true`, use the slim footer variant.
+|===

@@ -1,0 +1,11 @@
+= Modal Body
+
+Used to wrap the body for a xref:modal/index.adoc[Modal].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| id | `String` | | ID of the modal body.
+|===

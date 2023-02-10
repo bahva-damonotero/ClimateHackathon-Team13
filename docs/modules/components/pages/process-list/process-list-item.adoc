@@ -1,0 +1,13 @@
+= Process List Item
+
+A single item in a xref:process-list/index.adoc[Process List].
+
+See also: xref:process-list/process-list-item-header.adoc[Process List Item Header].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=className]
+|===

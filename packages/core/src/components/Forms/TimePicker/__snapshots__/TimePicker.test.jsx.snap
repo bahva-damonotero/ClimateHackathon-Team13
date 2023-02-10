@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimePicker should match snapshot 1`] = `
+<div
+  className="bah-uswds-time-picker"
+>
+  <label
+    className="usa-label"
+    htmlFor="timepicker-test"
+    id="timepicker-test--label"
+  >
+    Label
+  </label>
+  <span
+    className="usa-hint"
+    id="timepicker-test--hint"
+  >
+    hh:mm
+  </span>
+  <div
+    className="usa-time-picker"
+  >
+    <input
+      aria-describedby="timepicker-test--label timepicker-test--hint"
+      className="usa-input"
+      disabled={false}
+      id="timepicker-test"
+      name="timepicker-test"
+      type="text"
+    />
+  </div>
+</div>
+`;

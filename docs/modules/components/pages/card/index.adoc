@@ -1,0 +1,113 @@
+= Card
+
+A card wrapper component. Cards contain content and actions about a single subject.
+
+See also:
+
+* xref:card/card-body.adoc[Card Body]
+* xref:card/card-footer.adoc[Card Footer]
+* xref:card/card-group.adoc[Card Group]
+* xref:card/card-header.adoc[Card Header]
+* xref:card/card-media.adoc[Card Media]
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/card-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+[source,jsx]
+----
+include::example$card/CardExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Media
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/card-media-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+[source,jsx]
+----
+include::example$card/CardMediaExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Flag
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/card-flag-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+[source,jsx]
+----
+include::example$card/CardFlagExample.jsx[]
+----
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=className]
+| exdent | `Boolean` | `false` | When set, this property will override `exdent` on xref:card/card-body.adoc[CardBody], xref:card/card-footer.adoc[CardFooter], xref:card/card-header.adoc[CardHeader], and xref:card/card-media.adoc[CardMedia]
+| flag | `Boolean` +
+\| `'right'` | `false` | If `true` or `'right'` is passed in, a flag variant will be use.
+| headerFirst | `Boolean` | `false` | If `true`, the header will show before the media.
+|===

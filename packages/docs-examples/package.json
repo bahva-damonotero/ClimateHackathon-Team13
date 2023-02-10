@@ -1,0 +1,43 @@
+{
+  "name": "@boozallen-uip/uswds-react-docs-examples",
+  "version": "3.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:boozallen-uip/uswds-react.git",
+    "directory": "packages/docs-examples"
+  },
+  "main": "src/index.js",
+  "homepage": ".",
+  "scripts": {
+    "start": "craco start",
+    "build:docs": "craco build"
+  },
+  "dependencies": {
+    "@boozallen-uip/uswds-react-core": "*",
+    "@boozallen-uip/uswds-react-loading": "*",
+    "@boozallen-uip/uswds-react-rich-text-editor": "*",
+    "@boozallen-uip/uswds-react-table": "*",
+    "@boozallen-uip/uswds-react-utils": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "5.0.0",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.4.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,179 @@
+= Header
+
+A header and navigation bar for your site.
+
+See also:
+
+* xref:nav/header/header-navigation.adoc[Header Navigation]
+* xref:nav/header/header-secondary-navigation.adoc[Header Secondary Navigation]
+* xref:nav/header/header-title.adoc[Header Title]
+* xref:nav/header/navigation-dropdown.adoc[Navigation Dropdown]
+* xref:nav/header/navigation-link.adoc[Navigation Link]
+
+== Usage Examples
+
+=== Basic header
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/header-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/Header/BasicHeaderExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Basic header with megamenu
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/header-with-mega-menu-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/Header/BasicHeaderWithMegaMenuExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Basic header without search
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/header-without-search-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/Header/BasicHeaderWithoutSearchExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Extended header
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/header-extended-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/Header/ExtendedHeaderExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Extended header with megamenu
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/header-extended-with-mega-menu-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$navigation/Header/ExtendedHeaderWithMegaMenuExample.jsx[]
+----
+
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Property* | *Type*  | *Default* | *Description*
+include::../../shared/shared.adoc[tag=className]
+| extended | `Boolean` | | If `true`, use the extended header variant.
+|===

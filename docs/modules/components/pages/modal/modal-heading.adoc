@@ -1,0 +1,11 @@
+= Modal Heading
+
+Used to wrap the heading for a xref:modal/index.adoc[Modal].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| id | `String` | | ID of the modal heading.
+|===

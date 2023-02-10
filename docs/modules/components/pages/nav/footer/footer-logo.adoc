@@ -1,0 +1,12 @@
+= Footer Logo
+
+Used to display a logo inside a xref:nav/footer/index.adoc[Footer].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| logoDesc | `String` | | Logo image description for screen readers.
+| logoSrc | `String` | | URL or path for the logo image.
+|===

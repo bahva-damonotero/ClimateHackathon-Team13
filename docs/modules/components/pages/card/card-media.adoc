@@ -1,0 +1,20 @@
+= Card Media
+
+Used to add an image to a xref:card/index.adoc[Card].
+
+The DOM content for this component should be the alternate text or description for the image.
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| aspectRatio | `String` | `'1x1'` +
+\| `'2x1'` +
+\| `'4x3'` +
+\| `'9x16'` +
+\| `'16x9'` | Sets a fixed aspect ratio for the media.
+| exdent | `Boolean` | `false` | Should the image be exdent?
+| inset | `Boolean` | `false` | Should the image be inset?
+| src | `String` | | URL or path for the image.
+|===

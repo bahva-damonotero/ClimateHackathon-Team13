@@ -1,0 +1,50 @@
+= Range
+
+A range form input.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/range-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/RangeExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+In addition to the below props, any HTML attributes (such as `readOnly`, `aria-describedby`, etc.) can be used and will be passed through to the `<input>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=disabled]
+include::../shared/shared.adoc[tag=error]
+include::../shared/shared.adoc[tag=id]
+| max | `Number` | | The maximum value allowed.
+| min | `Number` | | The minimum value allowed.
+include::../shared/shared.adoc[tag=onChange]
+| step | `Number` | `1` | Specifies the legal number of intervals.
+| value | `Number` | | Used to set the value of the range.
+|===

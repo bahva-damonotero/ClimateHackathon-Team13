@@ -1,0 +1,155 @@
+= Alert
+
+An alert banner used to convey important information.
+
+See also:
+
+* xref:site-alert.adoc[Site Alert]
+* xref:alert-outlet.adoc[Alert Outlet]
+* xref:toast-outlet.adoc[Toast Outlet]
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/alert-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$alert/AlertExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Close
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/alert-close-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$alert/AlertCloseExample.jsx[]
+----
+--
+====
+
+'''
+
+=== No icon
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/alert-no-icon-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$alert/AlertNoIconExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Slim
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/alert-slim-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$alert/AlertSlimExample.jsx[]
+----
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::shared/shared.adoc[tag=className]
+| fadeOut | `Boolean` | `false` | Automatically set by the `AlertService` to make toast alerts fade out.
+| heading | `JSX.Element \| String` | | The heading content of the alert.
+| icon | `Boolean` | `true` | Should the icon be shown or not?
+| onClose | `(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) \=> void` | | Function called when the alert's close button is clicked. The close button is hidden if this is not provided.
+| role | `'alert'` +
+\| `'alertdialog'` | | ARIA role to apply to the alert. Use this for `error` or `warning` type alerts. See also:
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role[alert]
+and
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role[alertdialog].
+| slim | `Boolean` | `false` | If `true`, the slim alert variant is used.
+| type | `'error'` +
+\| `'info'` +
+\| `'success'` +
+\| `'warning'` | | Determines the icon and colors of the alert.
+|===

@@ -1,0 +1,48 @@
+= File Input
+
+An input for selecting one or more files that also supports dragging and dropping.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/file-input-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/file-input/FileInputExample.jsx[]
+----
+
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| accept | `String` | | String defining the file type the input should accept. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#attr-accept[here] for more info.
+| disabled | `Boolean` | `false` | Should the file input be disabled?
+include::../shared/shared.adoc[tag=error]
+| hint | `JSX.Element \| String` | | Hint to be shown for the file input.
+include::../shared/shared.adoc[tag=id]
+| multiple | `Boolean` | `false` | If `true`, the file input will allow multiple files to be selected.
+include::../shared/shared.adoc[tag=onChange]
+| value | `FileList | String` | | Used to set the file input value.
+| wrongFileTypeErrorMessage | `String` | | Used to override the error message shown when an invalid file type is selected.
+|===

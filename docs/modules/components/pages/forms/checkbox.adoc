@@ -1,0 +1,83 @@
+= Checkbox
+
+A single checkbox form input.
+
+See also:
+
+* xref:forms/checkbox-group.adoc[Checkbox Group]
+* xref:forms/checkbox-label-description.adoc[Checkbox Label Description]
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/checkbox-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/checkbox/CheckboxExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Tile
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/checkbox-tile-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/checkbox/CheckboxTileExample.jsx[]
+----
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| checked | `Boolean` | `false` | State of the checkbox.
+| disabled | `Boolean` | `false` | Should the checkbox be disabled?
+| groupIndex | `Number` | | Index of the checkbox in the `<CheckboxGroup>` (auto-populated).
+| id | `String` | | ID for the checkbox (auto-populated if used inside a `<CheckboxGroup>`).
+| onChange | `(e: React.ChangeEvent<HTMLInputElement>) \=> void` | | Function called when the checkbox is checked or unchecked.
+| readOnly | `Boolean` | `false` | Should the checkbox be marked as read-only?
+| tile | `Boolean` | `false` | If `true`, the tile checkbox variant is used. This is automatically set when used inside a `<CheckboxGroup>`.
+|===

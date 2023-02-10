@@ -1,0 +1,4 @@
+files:
+  include: 'packages/**/*.s+(a|c)ss'
+  ignore:
+    - 'packages/**/dist/**/*.scss'

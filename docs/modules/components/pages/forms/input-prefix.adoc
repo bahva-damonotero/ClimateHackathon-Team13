@@ -1,0 +1,3 @@
+= Input Prefix
+
+Symbols or abbreviations that help users enter the right type of information. Displayed at the beginning of an xref:forms/input.adoc[Input].

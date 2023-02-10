@@ -1,0 +1,68 @@
+# Adding to an Existing Project
+
+## Prerequisites
+
+Things you will need:
+
+- GitHub Personal Access Token
+
+Please read and follow the instructions for creating a `.npmrc` file found xref:overview::npmrc.adoc[here] before proceeding.
+
+## Instructions
+
+### Step 1: Add the Core Package as a Dependency
+
+Open up a terminal window and run:
+
+```terminal
+npm i @boozallen-uip/uswds-react-core
+```
+
+### Step 2: Import the UIP Styles
+
+In `src/styles.scss`, add the following lines to import the UIP Core styles:
+
+```scss
+// import UIP & USWDS default settings
+@forward '@boozallen-uip/uswds-react-core/dist/scss/settings.scss';
+
+// import component styles
+@forward '@boozallen-uip/uswds-react-core/dist/scss/styles.scss';
+```
+
+In `src/index.jsx` or `src/App.jsx`, import `styles.scss`:
+
+```jsx
+import './styles.scss'
+```
+
+If you are not already using `SASS/SCSS`, then install it:
+
+```terminal
+npm i sass
+```
+
+If you would like to override the UIP and USWDS style settings you may do so by adding lines between the two imports shown above.
+
+Here is an example of overriding some UIP and USWDS style settings:
+
+```scss
+// import UIP & USWDS default settings
+@forward '@boozallen-uip/uswds-react-core/dist/scss/settings.scss';
+
+// override UIP & USWDS settings
+$theme-color-primary: 'green-50v'; // this is an example of overriding the primary color setting
+$theme-button-border-radius: 'pill'; // this is an example of overriding the border radius for buttons
+$bah-uswds-toast-fade-in: 3s; // this is an example of overriding the time it takes for a Toast Alert to fade in
+
+// import component styles
+@forward '@boozallen-uip/uswds-react-core/dist/scss/styles.scss';
+```
+
+If you are planning on using other UIP component library packages, such as `rich-text-editor`, you should add import lines for their styles following the import of the `core` component styles like so:
+
+```scss
+// import component styles
+@forward '@boozallen-uip/uswds-react-core/dist/scss/styles.scss';
+@forward '@boozallen-uip/uswds-react-rich-text-editor/dist/scss/styles.scss';
+```

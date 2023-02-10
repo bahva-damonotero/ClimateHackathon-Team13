@@ -1,0 +1,3 @@
+= Accordion Item
+
+A single accordion item. Must be wrapped by an xref:accordion/accordion-group.adoc[Accordion Group].

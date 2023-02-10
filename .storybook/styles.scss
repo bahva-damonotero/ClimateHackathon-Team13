@@ -1,0 +1,20 @@
+// configure USWDS design tokens
+@use 'uswds-core' with (
+  $theme-show-notifications: false,
+  $theme-image-path: '~@uswds/uswds/img',
+  $theme-hero-image: '~@uswds/uswds/img/hero.jpg',
+  $theme-font-path: '~@uswds/uswds/fonts',
+);
+
+@forward '../packages/core/src/styles'; // USWDS and Booz Allen core styles
+@forward '../packages/loading/src/styles'; // loading indicator styles
+@forward '../packages/rich-text-editor/src/styles'; // rich text editor styles
+@forward '../packages/table/src/styles'; // table styles
+
+// uswds styles needed to fix the rendering of some icons
+@import '~@uswds/uswds/css/uswds.css';
+
+// styles for storybook preview only
+.sb-show-main {
+  background: none;
+}

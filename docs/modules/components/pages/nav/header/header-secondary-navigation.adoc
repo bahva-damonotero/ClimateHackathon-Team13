@@ -1,0 +1,5 @@
+= Header Secondary Navigation
+
+A component used to add secondary navigation items in a xref:nav/header/index.adoc[Header].
+
+See also: xref:nav/header/navigation-link.adoc[Navigation Link].

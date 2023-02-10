@@ -1,0 +1,82 @@
+= Indeterminate Spinner
+
+A spinner to be shown when the loading time is unknown.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/indeterminate-spinner-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$loading/IndeterminateSpinnerExample.jsx[]
+----
+
+--
+====
+
+
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| color | `'black'` +
+\| `'white'` +
+\| `'light-gray'` +
+\| `'gray'` +
+\| `'dark-gray'` +
+\| `'blue-gray'` +
+\| `'light-blue'` +
+\| `'blue'` +
+\| `'dark-blue'` +
+\| `'light-green'` +
+\| `'green'` +
+\| `'dark-green'` +
+\| `'light-yellow'` +
+\| `'yellow'` +
+\| `'dark-yellow'` +
+\| `'amber'` +
+\| `'orange'` +
+\| `'deep-orange'` +
+\| `'light-red'` +
+\| `'red'` +
+\| `'dark-red'` +
+\| `'light-purple'` +
+\| `'purple'` +
+\| `'dark-purple'` +
+\| `'magenta'` +
+\| `'light-brown'` +
+\| `'brown'` +
+\| `'dark-brown'` | `'blue'` | Color of the spinner.
+| size | `Number` | `80` | Size of the spinner in pixels.
+| type | `'chasing-dots'` +
+\| `'circle'` +
+\| `'cube-grid'` +
+\| `'double-bounce'` +
+\| `'fading-circle'` +
+\| `'folding-cube'` +
+\| `'pulse'` +
+\| `'rotating-plane'` +
+\| `'three-bounce'` +
+\| `'wandering-cubes'` +
+\| `'wave'` | `'circle'` | Animation type of the spinner.
+|===

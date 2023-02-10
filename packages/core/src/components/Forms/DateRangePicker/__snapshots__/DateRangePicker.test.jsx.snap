@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateRangePicker should match snapshot 1`] = `
+<div
+  className="bah-uswds-date-range-picker"
+>
+  <div
+    className="usa-date-range-picker"
+  >
+    <div
+      className="bah-uswds-date-picker"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <label
+        className="usa-label"
+        htmlFor="date-range-picker-test-start"
+        id="date-range-picker-test-start-label"
+      >
+        Start Date Label
+      </label>
+      <span
+        className="usa-hint"
+        id="date-range-picker-test-start-hint"
+      >
+        mm/dd/yyyy
+      </span>
+      <div
+        className="usa-date-picker"
+      >
+        <input
+          aria-describedby="date-range-picker-test-start-hint"
+          aria-labelledby="date-range-picker-test-start-label"
+          className="usa-input"
+          disabled={false}
+          id="date-range-picker-test-start"
+          name="date-range-picker-test-start"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      className="bah-uswds-date-picker"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <label
+        className="usa-label"
+        htmlFor="date-range-picker-test-end"
+        id="date-range-picker-test-end-label"
+      >
+        End Date Label
+      </label>
+      <span
+        className="usa-hint"
+        id="date-range-picker-test-end-hint"
+      >
+        mm/dd/yyyy
+      </span>
+      <div
+        className="usa-date-picker"
+      >
+        <input
+          aria-describedby="date-range-picker-test-end-hint"
+          aria-labelledby="date-range-picker-test-end-label"
+          className="usa-input"
+          disabled={false}
+          id="date-range-picker-test-end"
+          name="date-range-picker-test-end"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

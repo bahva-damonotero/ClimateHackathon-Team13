@@ -1,0 +1,14 @@
+= Footer Social Link
+
+A link to a social media page used inside xref:nav/footer/footer-social-links.adoc[Footer Social Links].
+
+See also: xref:nav/footer/index.adoc[Footer].
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| type | `'facebook' \| 'instagram' \| 'rss' \| 'twitter' \| 'youtube'` | | Type of social media page being linked to.
+| url | `String` | | URL of the social media page.
+|===

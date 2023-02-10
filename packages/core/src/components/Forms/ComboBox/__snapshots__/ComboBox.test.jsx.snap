@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComboBox should match snapshot 1`] = `
+<div
+  className="bah-uswds-combo-box"
+>
+  <label
+    className="usa-label"
+    htmlFor="combobox-example"
+  >
+    Select your desired option
+  </label>
+  <div
+    className="usa-combo-box"
+  >
+    <select
+      className="usa-select usa-combo-box__select"
+      disabled={false}
+      id="combobox-example"
+      name="combobox-example"
+    >
+      <option
+        value={0}
+      >
+        John Doe
+      </option>
+      <option
+        value={1}
+      >
+        Jane Doe
+      </option>
+      <option
+        value={2}
+      >
+        Bob Bobson
+      </option>
+    </select>
+  </div>
+</div>
+`;

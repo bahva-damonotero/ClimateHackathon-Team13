@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker should match snapshot 1`] = `
+<div
+  className="bah-uswds-date-picker"
+  style={
+    Object {
+      "display": "none",
+    }
+  }
+>
+  <label
+    className="usa-label"
+    htmlFor="date-picker-example"
+    id="date-picker-example-label"
+  >
+    Label
+  </label>
+  <span
+    className="usa-hint"
+    id="date-picker-example-hint"
+  >
+    mm/dd/yyyy
+  </span>
+  <div
+    className="usa-date-picker"
+  >
+    <input
+      aria-describedby="date-picker-example-hint"
+      aria-labelledby="date-picker-example-label"
+      className="usa-input"
+      disabled={false}
+      id="date-picker-example"
+      name="date-picker-example"
+      type="text"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,77 @@
+= Button Group
+
+Used to group similar or related xref:button/button.adoc[Buttons] together.
+
+See also: xref:button/button-group-item.adoc[Button Group Item].
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/button-group-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$button/ButtonGroupExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Segmented
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/button-group-segmented-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$button/ButtonGroupSegmentedExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| segmented | `Boolean` | `false` | If `true`, then the buttons in the group are connected into one segmented item.
+|===

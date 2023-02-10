@@ -1,0 +1,117 @@
+= Time Picker
+
+A component that helps users select a time.
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/time-picker-default-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/time-picker/TimePickerDefaultExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== Min & max time
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/time-picker-min-max-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/time-picker/TimePickerMinMaxExample.jsx[]
+----
+
+--
+====
+
+'''
+
+=== 24-hour format
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/time-picker-24-hr-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/time-picker/TimePicker24HrExample.jsx[]
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=disabled]
+include::../shared/shared.adoc[tag=error]
+| hint | `JSX.Element` | | Hint to be shown for the time picker.
+include::../shared/shared.adoc[tag=id]
+| maxTime | `String` | | The end time used in the time picker in `hh:mm` 24-hour format. The default is `23:59`.
+| minTime | `String` | | The start time used in the time picker in `hh:mm` 24-hour format. The default is `00:00`.
+include::../shared/shared.adoc[tag=onChange]
+include::../shared/shared.adoc[tag=placeholder]
+| step | `Number` | | The number of minutes between options. The minimum is 1 minute and the default is 30 minutes.
+| use24Hour | `Boolean` | `false` | If `true`, the 24-hour time format is used.
+| value | `String` | | Used to set the value of the input. Must be in `hh:mm` 24-hour format.
+|===

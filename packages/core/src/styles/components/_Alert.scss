@@ -1,0 +1,26 @@
+.usa-alert {
+  display: flex;
+  align-items: stretch;
+
+  .bah-uswds-alert__right {
+    display: flex;
+    margin-left: auto;
+
+    .bah-uswds-alert__close-button {
+      position: relative;
+      top: -0.05rem;
+      right: 0.25rem;
+
+      font-size: 3rem;
+      font-weight: 600;
+
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      > div {
+        line-height: 0.5;
+      }
+    }
+  }
+}

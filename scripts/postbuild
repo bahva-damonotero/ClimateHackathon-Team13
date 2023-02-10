@@ -1,0 +1,21 @@
+#!/bin/bash
+
+for PACKAGE in core loading rich-text-editor table utils
+do
+  PACKAGE_PATH="packages/$PACKAGE"
+  SRC_PATH="$PACKAGE_PATH/src"
+  DIST_PATH="$PACKAGE_PATH/dist"
+
+  echo "Copying $PACKAGE type definitions..."
+  cp "$SRC_PATH/index.d.ts" "$DIST_PATH/"
+
+  STYLES_PATH="$SRC_PATH/styles"
+  if [ -d "$STYLES_PATH" ]
+  then
+    echo "Copying $PACKAGE SCSS files..."
+    cp -r "$STYLES_PATH" "$DIST_PATH/scss"
+  fi
+
+  echo "Copying license..."
+  cp LICENSE.md "$PACKAGE_PATH/"
+done

@@ -1,0 +1,56 @@
+{
+  "name": "@boozallen-uip/uswds-react-core",
+  "version": "3.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:boozallen-uip/uswds-react.git",
+    "directory": "packages/core"
+  },
+  "main": "dist/core.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/core.js",
+      "default": "./dist/core.js"
+    },
+    "./styles": "./dist/scss",
+    "./styles/*": "./dist/scss/*/index.scss"
+  },
+  "sideEffects": [
+    "**/*.scss"
+  ],
+  "scripts": {
+    "build": "webpack --mode=production",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@boozallen-uip/uswds-react-utils": "*",
+    "@uswds/uswds": "3.2.0",
+    "lodash.isequal": "^4.5.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.0",
+    "react-scripts": "5.0.0",
+    "rxjs": "^6.5.5",
+    "uuid": "^8.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.53.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressCircle should match snapshot 1`] = `
+<div
+  aria-live="assertive"
+  className="bah-uswds-progress-circle"
+  role="alert"
+  style={
+    Object {
+      "height": 80,
+      "width": 80,
+    }
+  }
+>
+  <svg
+    aria-hidden="true"
+    height={80}
+    width={80}
+  >
+    <path
+      d="M 61.45174687785418 12.344574566850834 A 35 35 0 0 0 40 5"
+      fill="none"
+      stroke="blue"
+      strokeWidth={10}
+    />
+    <text
+      dominantBaseline="central"
+      fontFamily=""
+      fontSize={20}
+      fontWeight="normal"
+      textAnchor="middle"
+      x={40}
+      y={38.857142857142854}
+    >
+      10
+      %
+    </text>
+  </svg>
+  <div
+    className="bah-uswds-loading--sr-text"
+  >
+    Progress:
+    10.5
+    %
+  </div>
+</div>
+`;

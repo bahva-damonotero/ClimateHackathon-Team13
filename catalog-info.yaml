@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: uswds-react
+  title: USWDS React Component Library
+  description: React components wrapping the USWDS components in addition to custom components that fit the theme and style of USWDS.
+  annotations:
+    github.com/project-slug: uip/uswds-react
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - react
+    - uip
+    - library
+    - uswds
+    - software-studio
+    - web-app
+  links:
+    - url: https://pages.github.boozallencsn.com/uip/docs/uswds-react/latest/index.html
+      title: Documentation
+    - url: https://pages.github.boozallencsn.com/uip/docs/storybook-react
+      title: Storybook
+    - url: https://github.boozallencsn.com/uip/design-kit
+      title: Design Kit
+    - url: https://boozallen.sharepoint.com/sites/chief-technology-office/solutions-center/SitePages/Software-Studio.aspx
+      title: Marketing Material
+    - url: https://bah-ssp.slack.com/archives/C01BMEK53UZ
+      title: Slack Community Channel
+    - url: https://teams.microsoft.com/l/channel/19%3a08407565a49948ab967cccc1edae27e0%40thread.tacv2/Software%2520Studio?groupId=9ad1652c-eba1-4d23-a18a-fd0e4fdcae84&tenantId=d5fe813e-0caa-432a-b2ac-d555aa91bd1c 
+      title: MS Teams Community Channel
+spec:
+  type: library
+  lifecycle: experimental
+  owner: uip/uip-studio

@@ -1,0 +1,44 @@
+// configure USWDS design tokens
+@use 'uswds-core' with (
+  $theme-show-notifications: false,
+  $theme-image-path: '~@uswds/uswds/img',
+  $theme-hero-image: '~@uswds/uswds/img/hero.jpg',
+  $theme-font-path: '~@uswds/uswds/fonts',
+  // $theme-color-primary: 'green-50v', // this is an example of overriding the primary color setting
+  // $theme-button-border-radius: 'pill', // this is an example of overriding the border radius for buttons
+);
+
+// import USWDS and Booz Allen core styles
+@forward '@boozallen-uip/uswds-react-core/styles';
+
+/* OR import USWDS and Booz Allen core styles with configured Booz Allen design tokens */
+// @use '@boozallen-uip/uswds-react-core/styles' with (
+//   $bah-uswds-toast-fade-in: 3s, // this is an example of overriding the time it takes for a Toast Alert to fade in
+//   $bah-uswds-toast-fade-out: 3s, // this is an example of overriding the time it takes for a Toast Alert to fade out
+// );
+
+@forward '@boozallen-uip/uswds-react-loading/styles';
+@forward '@boozallen-uip/uswds-react-rich-text-editor/styles';
+@forward '@boozallen-uip/uswds-react-table/styles';
+
+// global
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+#headerAndMain {
+  flex: 1 0 auto;
+}
+
+.usa-footer {
+  flex-shrink: 0;
+}
+
+// import page styles here

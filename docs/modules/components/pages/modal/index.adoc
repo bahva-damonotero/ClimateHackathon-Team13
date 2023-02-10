@@ -1,0 +1,58 @@
+= Modal
+
+A modal disables page content and focuses the user’s attention on a single task or message.
+
+The `data-open-modal` attribute should be placed on xref:button/button.adoc[Buttons] that will open the modal.
+
+The `data-close-modal` attribute should be placed on xref:button/button.adoc[Buttons] that will close the modal.
+
+WARNING: If you trigger navigation to another page within the React app while a modal is open, all modals will break. To avoid this, close the modal before triggering navigation.
+
+See also:
+
+* xref:modal/modal-heading.adoc[Modal Heading]
+* xref:modal/modal-body.adoc[Modal Body]
+* xref:modal/modal-footer.adoc[Modal Footer]
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/modal-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+[source,jsx]
+----
+include::example$modal/ModalExample.jsx[]
+----
+--
+
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| describedBy | `String` | | ID of the xref:modal/modal-body.adoc[ModalBody].
+| forceAction | `Boolean` | `false` | If `true`, the user will be forced to take an action to close the modal.
+| id | `String` | | ID of the modal.
+| isOpen | `Boolean` | `false` | Toggles modal programmatically if `onStateChanged` is defined.
+| labelledBy | `String` | | ID of the xref:modal/modal-heading.adoc[ModalHeading].
+| large  | `Boolean`| `false` | If `true`, the large variant is used.
+| onStateChanged | `(newState: boolean) => void` | | Function called whenever the modal open state is changed.
+|===

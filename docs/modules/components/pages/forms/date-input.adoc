@@ -1,0 +1,46 @@
+= Date Input
+
+A month/day/year date input.
+
+== Usage Example
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/date-input-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/DateInputExample.jsx[]
+----
+
+--
+====
+
+== Props
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| disabled | `Boolean` | `false` | Should the inputs be marked as disabled?
+include::../shared/shared.adoc[tag=error]
+| hint | `JSX.Element \| String` | | Hint to be shown for the date input.
+include::../shared/shared.adoc[tag=id]
+include::../shared/shared.adoc[tag=onChange]
+| readOnly | `Boolean` | `false` | Should the inputs be marked as read-only?
+| value | `{ day: Number, month: Number, year: Number }` | | Used to set the values of the inputs.
+|===

@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxGroup should match snapshot 1`] = `
+<fieldset
+  className="usa-fieldset"
+>
+  <legend
+    className="usa-legend"
+  >
+    Checkbox Group Label
+  </legend>
+  <div
+    className="usa-checkbox"
+  >
+    <input
+      checked={false}
+      className="usa-checkbox__input"
+      disabled={false}
+      id="checkbox-group-example--0"
+      name="checkbox-group-example"
+      readOnly={true}
+      type="checkbox"
+    />
+    <label
+      className="usa-checkbox__label"
+      htmlFor="checkbox-group-example--0"
+    >
+      Choice One
+    </label>
+  </div>
+  <div
+    className="usa-checkbox"
+  >
+    <input
+      checked={false}
+      className="usa-checkbox__input"
+      disabled={false}
+      id="checkbox-group-example--1"
+      name="checkbox-group-example"
+      readOnly={true}
+      type="checkbox"
+    />
+    <label
+      className="usa-checkbox__label"
+      htmlFor="checkbox-group-example--1"
+    >
+      Choice Two
+    </label>
+  </div>
+  <div
+    className="usa-checkbox"
+  >
+    <input
+      checked={false}
+      className="usa-checkbox__input"
+      disabled={true}
+      id="checkbox-group-example--2"
+      name="checkbox-group-example"
+      readOnly={false}
+      type="checkbox"
+    />
+    <label
+      className="usa-checkbox__label"
+      htmlFor="checkbox-group-example--2"
+    >
+      Choice Three
+    </label>
+  </div>
+</fieldset>
+`;

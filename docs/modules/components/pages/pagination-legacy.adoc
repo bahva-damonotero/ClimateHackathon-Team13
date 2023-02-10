@@ -1,0 +1,86 @@
+= Pagination (legacy)
+
+A component for controlling pagination.
+
+WARNING: This component has been replaced the USWDS xref:pagination.adoc[Pagination] component.
+
+== Transitioning to the new Pagination Component
+
+1. Import the new Pagination component from `@boozallen-uip/uswds-react-core` (instead of `@boozallen-uip/uswds-react-pagination`).
+
+2. Rename the `pageNumber` prop to `page`.
+
+3. Remove the props: `pageSize`, `resultsText`, and `totalItems`.
+
+4. Finally, add a prop called `totalPages` (this is equiavelent to `Math.ceil(totalItems / pageSize)`).
+
+=== An Example
+
+[tabs]
+====
+Old code::
++
+--
+
+[source,jsx]
+----
+import React, { useState } from 'react';
+import { Pagination } from '@boozallen-uip/uswds-react-pagination';
+
+export default function PaginationLegacyExample() {
+  const [page, setPage] = useState(1);
+
+  const totalItems = 100;
+  const pagesize = 10;
+
+  return (
+    <Pagination
+      pageNumber={page}
+      pageSize={pageSize}
+      totalItems={totalItems}
+      onChangePage={setPage}
+    />
+  );
+}
+----
+
+--
+New code::
++
+--
+
+[source,jsx]
+----
+import React, { useState } from 'react';
+import { Pagination } from '@boozallen-uip/uswds-react-core';
+
+export default function PaginationNewExample() {
+  const [page, setPage] = useState(1);
+
+  const totalItems = 100;
+  const pagesize = 10;
+
+  return (
+    <Pagination
+      page={page}
+      totalPages={Math.ceil(totalItems / pageSize)}
+      onChangePage={setPage}
+    />
+  );
+}
+----
+
+--
+====
+
+== Props
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+| onChangePage | `(pageNumber: number) \=> void` | | Function called with the page that was selected whenever a pagination button is pressed.
+| pageNumber | `Number` | | The current page.
+| pageSize | `Number` | | The number of elements displayed on each page.
+| resultsText | `String` | | Text used to replace the "1-10 of 100 results" text.
+| totalItems | `Number` | | The total number of items across all pages.
+|===

@@ -1,0 +1,115 @@
+= Dropdown
+
+A dropdown form input.
+
+== Usage Examples
+
+=== Default
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/dropdown-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/dropdown/DropdownExample.jsx[]
+----
+--
+====
+
+'''
+
+=== Custom renderer
+
+
+If you want to change how an option is displayed, you will need to set the `optionRenderer` property. For example, if your options are a list of objects, you may only want to show a single property in the Dropdown.
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/dropdown-custom-renderer-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/dropdown/DropdownCustomRendererExample.jsx[]
+----
+--
+====
+
+'''
+
+=== No "- Select -" option
+
+[tabs]
+====
+Preview::
++
+--
+
+++++
+<iframe
+  src="/uip/docs/examples-react/#/dropdown-no-select-example"
+  width="100%"
+  frameBorder="0"
+  onload="resizeIframe(this)"
+></iframe>
+++++
+
+--
+JSX::
++
+--
+
+[source,jsx]
+----
+include::example$forms/dropdown/DropdownNoSelectExample.jsx[]
+----
+--
+====
+
+== Props
+In addition to the below props, any HTML attributes (such as `disabled`, `readonly`, etc.) can be used and will be passed through to the `<select>` tag.
+
+[grid="rows"]
+|===
+| *Name* | *Type* | *Default* | *Description*
+include::../shared/shared.adoc[tag=comparator]
+include::../shared/shared.adoc[tag=error]
+include::../shared/shared.adoc[tag=id]
+| onChange | `(e: CustomEvent) \=> void` | | Function called when the dropdown selection is changed.
+include::../shared/shared.adoc[tag=optionRenderer]
+| options | `any[]` | | Array of options to display.
+| showSelectOption | `Boolean` | `true` | Should the "- Select -" option be shown?
+| value | `any` | | Used to set the dropdown selection.
+|===
